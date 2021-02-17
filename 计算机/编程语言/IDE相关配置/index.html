@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"grocerynotes.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Java&#x2F;Python&#x2F;C++&#x2F;C&#x2F;CMake&#x2F;HTML&#x2F;CSS配置过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IDE相关配置">
+<meta property="og:url" content="https://grocerynotes.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/IDE%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="GroceryNotes">
+<meta property="og:description" content="Java&#x2F;Python&#x2F;C++&#x2F;C&#x2F;CMake&#x2F;HTML&#x2F;CSS配置过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-17T09:22:29.000Z">
+<meta property="article:modified_time" content="2021-02-17T11:28:17.979Z">
+<meta property="article:author" content="GbtH">
+<meta property="article:tag" content="使用手册">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://grocerynotes.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/IDE%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>IDE相关配置 | GroceryNotes</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">GroceryNotes</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">一间杂货铺</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://grocerynotes.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/IDE%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GbtH">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GroceryNotes">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          IDE相关配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-17 17:22:29 / 修改时间：19:28:17" itemprop="dateCreated datePublished" datetime="2021-02-17T17:22:29+08:00">2021-02-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">Java/Python/C++/C/CMake/HTML/CSS配置过程</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h2><p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Chinese (Simplified) Language Pack EAP</span><br><span class="line">Rainbow Brackets</span><br></pre></td></tr></table></figure>
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual">官网</a></p>
+<p>命令</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">conda</span> <span class="string">list</span>             <span class="comment"># 查看安装的包</span></span><br><span class="line"><span class="string">conda</span> <span class="string">--version</span>        <span class="comment"># 查看conda版本</span></span><br><span class="line"><span class="string">conda</span> <span class="string">update</span> <span class="string">conda</span>     <span class="comment"># 升级conda</span></span><br><span class="line"></span><br><span class="line"><span class="string">conda</span> <span class="string">env</span> <span class="string">list</span>         <span class="comment"># 查看安装环境</span></span><br><span class="line"><span class="string">conda</span> <span class="string">create</span> <span class="string">-n</span> <span class="string">环境名</span> <span class="string">python=3.6.2</span>  <span class="comment"># 安装指定python版本的conda环境</span></span><br><span class="line"><span class="string">conda</span> <span class="string">activate</span> <span class="string">base</span>    <span class="comment"># 激活base环境</span></span><br><span class="line"></span><br><span class="line"><span class="string">conda</span> <span class="string">install</span> <span class="string">package</span>  <span class="comment"># 安装包package</span></span><br><span class="line"><span class="string">conda</span> <span class="string">update</span> <span class="string">--all</span>     <span class="comment"># 升级所有包</span></span><br></pre></td></tr></table></figure>
+<h2 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h2><p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Chinese (Simplified) Language Pack EAP</span><br><span class="line">Rainbow Brackets</span><br><span class="line">CSV Plugin</span><br></pre></td></tr></table></figure>
+<h2 id="manim"><a href="#manim" class="headerlink" title="manim"></a>manim</h2><h3 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/sox/files/sox/">sox</a></li>
+<li><a target="_blank" rel="noopener" href="https://miktex.org/download">MikTex</a>，安装后在<code>Overview</code>中点击<code>Check for updates</code>，若官网维护会无法更新</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/3b1b/manim">manim</a>，下载后在所在文件命令行处输入<code>conda env create -f environment.yml</code></li>
+</ul>
+<h3 id="CTEX字体支持"><a href="#CTEX字体支持" class="headerlink" title="CTEX字体支持"></a>CTEX字体支持</h3><p><code>manimlib\constant.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># TEX_USE_CTEX = False</span></span><br><span class="line">TEX_USE_CTEX = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<h3 id="自动补全"><a href="#自动补全" class="headerlink" title="自动补全"></a>自动补全</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; conda activate manim  <span class="comment"># 激活manim环境</span></span><br><span class="line">&gt; python                <span class="comment"># 运行python</span></span><br><span class="line">&gt;&gt;&gt;import sys </span><br><span class="line">&gt;&gt;&gt;sys.path</span><br><span class="line">[<span class="string">&#x27;D:\\anaconda3\\envs\\manim\\lib\\site-packages&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<p>将<code>manimlib</code>文件夹移到上述目录中</p>
+<h3 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m manim FileName.py ClassName -pl</span><br></pre></td></tr></table></figure>
+<h1 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h1><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">官网</a></p>
+<p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Bracket Pair Colorizer</span><br><span class="line">Chinese (Simplified) Language Pack for Visual Studio Code</span><br><span class="line">Rainbow CSV</span><br><span class="line">vscode-icons</span><br><span class="line">Visual Studio IntelliCode</span><br></pre></td></tr></table></figure>
+<h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><p>编译器<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/">mingw64</a>，添加安装路径<code>D:\mingw64\bin</code>到环境变量</p>
+<p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C&#x2F;C++</span><br></pre></td></tr></table></figure>
+<p>文件结构（所有涉及<code>mingw64</code>的地方都需要改为安装路径）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- .vscode</span><br><span class="line">  - c_cpp_properties.json</span><br><span class="line">  - launch.json</span><br><span class="line">  - settings.json</span><br><span class="line">  - tasks.json</span><br><span class="line">- build</span><br><span class="line">- helloworld.cpp</span><br></pre></td></tr></table></figure>
+<h2 id="c-cpp-properties-json"><a href="#c-cpp-properties-json" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h2><blockquote>
+<p>c_cpp_properties.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;MinGW64&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/mingw64/bin/g++.exe&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="launch-json"><a href="#launch-json" class="headerlink" title="launch.json"></a>launch.json</h2><blockquote>
+<p>launch.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;C++ Launch (GDB)&quot;</span>,                 <span class="comment">// 配置名称，将会在启动配置的下拉菜单中显示</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,                           <span class="comment">// 配置类型，这里只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,                        <span class="comment">// 请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;targetArchitecture&quot;</span>: <span class="string">&quot;x64&quot;</span>,                <span class="comment">// 生成目标架构，一般为x86或x64</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\build\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>, <span class="comment">// 将要进行调试的程序的路径</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],                                 <span class="comment">// 程序调试时传递给程序的命令行参数，一般设为空即可</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,                       <span class="comment">// 设为true时程序将暂停在程序入口处，一般设置为false</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span>,                  <span class="comment">// 调试程序时的工作目录，一般为$&#123;workspaceRoot&#125;</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">false</span>,                    <span class="comment">// 调试时是否显示控制台窗口，一般设置为true显示控制台</span></span><br><span class="line">            <span class="attr">&quot;internalConsoleOptions&quot;</span>: <span class="string">&quot;neverOpen&quot;</span>,      <span class="comment">// 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡&quot;,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,                            <span class="comment">// 指定连接的调试器</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\mingw64\\bin\\gdb.exe&quot;</span>, <span class="comment">// 调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for GDB&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;Compile&quot;</span> </span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><blockquote>
+<p>settings.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;editor.formatOnType&quot;</span>: <span class="literal">true</span>, <span class="comment">// 输入时就进行格式化，默认触发字符较少，分号可以触发</span></span><br><span class="line">    <span class="attr">&quot;code-runner.saveFileBeforeRun&quot;</span>: <span class="literal">true</span>, <span class="comment">// run code前保存</span></span><br><span class="line">    <span class="attr">&quot;C_Cpp.clang_format_sortIncludes&quot;</span>: <span class="literal">true</span>, <span class="comment">// 格式化时调整include的顺序（按字母排序）</span></span><br><span class="line">    <span class="attr">&quot;files.associations&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;*.m&quot;</span>: <span class="string">&quot;matlab&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;iterator&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;iostream&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;algorithm&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;*.tcc&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;deque&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;list&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;string&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;vector&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;array&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;unordered_map&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;string_view&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;initializer_list&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;ostream&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;atomic&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cctype&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;clocale&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cmath&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cstdarg&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cstddef&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cstdint&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cstdio&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cstdlib&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cstring&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cwchar&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cwctype&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;exception&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;functional&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;map&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;memory&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;memory_resource&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;optional&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;system_error&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;tuple&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;type_traits&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;utility&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;fstream&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;iosfwd&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;istream&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;limits&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;new&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;sstream&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;stdexcept&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;streambuf&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;typeinfo&quot;</span>: <span class="string">&quot;cpp&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;files.exclude&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;**/.classpath&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.project&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.settings&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.factorypath&quot;</span>: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="tasks-json"><a href="#tasks-json" class="headerlink" title="tasks.json"></a>tasks.json</h2><blockquote>
+<p>tasks.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;label&quot;</span>: <span class="string">&quot;Compile&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;g++&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span>,   <span class="comment">// 指定编译源代码文件</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span>,</span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;/build/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>, <span class="comment">// 指定输出文件名，不加该参数则默认输出a.exe</span></span><br><span class="line">                <span class="string">&quot;-O0&quot;</span>,      <span class="comment">// 优化级别</span></span><br><span class="line">                <span class="string">&quot;-ggdb3&quot;</span>,   <span class="comment">// 生成和调试有关的信息</span></span><br><span class="line">                <span class="string">&quot;-Wall&quot;</span>,    <span class="comment">// 开启额外警告</span></span><br><span class="line">                <span class="string">&quot;-static-libgcc&quot;</span>,   <span class="comment">// 静态链接</span></span><br><span class="line">                <span class="string">&quot;-std=c++17&quot;</span>,       <span class="comment">// 使用c++17标准</span></span><br><span class="line">                <span class="string">&quot;-finput-charset=UTF-8&quot;</span>,    <span class="comment">//输入编译器文本编码 默认为UTF-8</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">&quot;owner&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;fileLocation&quot;</span>: [</span><br><span class="line">                    <span class="string">&quot;absolute&quot;</span>,</span><br><span class="line">                ],</span><br><span class="line">                <span class="attr">&quot;pattern&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;regexp&quot;</span>: <span class="string">&quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;file&quot;</span>: <span class="number">1</span>,</span><br><span class="line">                    <span class="attr">&quot;line&quot;</span>: <span class="number">2</span>,</span><br><span class="line">                    <span class="attr">&quot;column&quot;</span>: <span class="number">3</span>,</span><br><span class="line">                    <span class="attr">&quot;severity&quot;</span>: <span class="number">4</span>,</span><br><span class="line">                    <span class="attr">&quot;message&quot;</span>: <span class="number">5</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;shell&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">&quot;presentation&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">&quot;echo&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">&quot;reveal&quot;</span>: <span class="string">&quot;always&quot;</span>, <span class="comment">// 在“终端”中显示编译信息的策略，可以为always，silent，never</span></span><br><span class="line">                 <span class="attr">&quot;focus&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                 <span class="attr">&quot;panel&quot;</span>: <span class="string">&quot;shared&quot;</span> <span class="comment">// 不同的文件的编译信息共享一个终端面板</span></span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C-1"><a href="#C-1" class="headerlink" title="C"></a>C</h1><p>编译器<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/">mingw64</a>，添加安装路径<code>D:\mingw64\bin</code>到环境变量</p>
+<p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C&#x2F;C++</span><br></pre></td></tr></table></figure>
+<p>文件结构（所有涉及<code>mingw64</code>的地方都需要改为安装路径）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- .vscode</span><br><span class="line">  - c_cpp_properties.json</span><br><span class="line">  - launch.json</span><br><span class="line">  - settings.json</span><br><span class="line">  - tasks.json</span><br><span class="line">- build</span><br><span class="line">- helloworld.c</span><br></pre></td></tr></table></figure>
+<h2 id="c-cpp-properties-json-1"><a href="#c-cpp-properties-json-1" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h2><blockquote>
+<p>c_cpp_properties.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;MinGW64&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/mingw64/bin/gcc.exe&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c11&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="launch-json-1"><a href="#launch-json-1" class="headerlink" title="launch.json"></a>launch.json</h2><blockquote>
+<p>launch.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;C Launch (GDB)&quot;</span>, <span class="comment">// 配置名称，将会在启动配置的下拉菜单中显示</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>, <span class="comment">// 配置类型，这里只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>, <span class="comment">// 请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;targetArchitecture&quot;</span>: <span class="string">&quot;x64&quot;</span>, <span class="comment">// 生成目标架构，一般为x86或x64</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;/build/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>, <span class="comment">// 将要进行调试的程序的路径</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [], <span class="comment">// 程序调试时传递给程序的命令行参数，一般设为空即可</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>, <span class="comment">// 设为true时程序将暂停在程序入口处，一般设置为false</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span>, <span class="comment">// 调试程序时的工作目录，一般为$&#123;workspaceRoot&#125;</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">false</span>, <span class="comment">// 调试时是否显示控制台窗口，一般设置为true显示控制台</span></span><br><span class="line">            <span class="attr">&quot;internalConsoleOptions&quot;</span>: <span class="string">&quot;neverOpen&quot;</span>, <span class="comment">// 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡&quot;,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>, <span class="comment">// 指定连接的调试器</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:/mingw64/bin/gdb.exe&quot;</span>, <span class="comment">// 调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for GDB&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;compile&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="settings-json-1"><a href="#settings-json-1" class="headerlink" title="settings.json"></a>settings.json</h2><blockquote>
+<p>settings.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;editor.formatOnType&quot;</span>: <span class="literal">true</span>, <span class="comment">// 输入时就进行格式化，默认触发字符较少，分号可以触发</span></span><br><span class="line">    <span class="attr">&quot;code-runner.saveFileBeforeRun&quot;</span>: <span class="literal">true</span>, <span class="comment">// run code前保存</span></span><br><span class="line">    <span class="attr">&quot;C_Cpp.clang_format_sortIncludes&quot;</span>: <span class="literal">true</span>, <span class="comment">// 格式化时调整include的顺序（按字母排序）</span></span><br><span class="line">    <span class="attr">&quot;files.associations&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;iterator&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;iostream&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;algorithm&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;*.tcc&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;deque&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;list&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;string&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;vector&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;array&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;unordered_map&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;string_view&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;initializer_list&quot;</span>: <span class="string">&quot;cpp&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;files.exclude&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;**/.classpath&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.project&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.settings&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.factorypath&quot;</span>: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="tasks-json-1"><a href="#tasks-json-1" class="headerlink" title="tasks.json"></a>tasks.json</h2><blockquote>
+<p>tasks.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;label&quot;</span>: <span class="string">&quot;compile&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;gcc&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span>,   <span class="comment">// 指定编译源代码文件             </span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span>,</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/build/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>, <span class="comment">// 指定输出文件名</span></span><br><span class="line">                <span class="string">&quot;-O0&quot;</span>,      <span class="comment">// 优化级别</span></span><br><span class="line">                <span class="string">&quot;-ggdb3&quot;</span>,   <span class="comment">// 生成和调试有关的信息</span></span><br><span class="line">                <span class="string">&quot;-Wall&quot;</span>,    <span class="comment">// 开启额外警告</span></span><br><span class="line">                <span class="string">&quot;-std=c11&quot;</span>, <span class="comment">// 使用c11标准</span></span><br><span class="line">                <span class="string">&quot;-Wno-format&quot;</span>,</span><br><span class="line">                <span class="string">&quot;-finput-charset=UTF-8&quot;</span>, <span class="comment">//输入编译器文本编码 默认为UTF-8</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;shell&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">&quot;presentation&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">&quot;echo&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">&quot;reveal&quot;</span>: <span class="string">&quot;always&quot;</span>, <span class="comment">// 在“终端”中显示编译信息的策略，可以为always，silent，never</span></span><br><span class="line">                 <span class="attr">&quot;focus&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                 <span class="attr">&quot;panel&quot;</span>: <span class="string">&quot;shared&quot;</span> <span class="comment">// 不同的文件的编译信息共享一个终端面板</span></span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h1><p>编译器<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/">mingw64</a>，添加安装路径<code>D:\mingw64\bin</code>到环境变量</p>
+<p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C&#x2F;C++</span><br><span class="line">CMake</span><br><span class="line">CMake Tools</span><br></pre></td></tr></table></figure>
+<p>文件结构（所有涉及<code>mingw64</code>的地方都需要改为安装路径）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- .vscode</span><br><span class="line">  - c_cpp_properties.json</span><br><span class="line">  - launch.json</span><br><span class="line">  - settings.json</span><br><span class="line">- build</span><br><span class="line">- Inc</span><br><span class="line">  - helloworld.hpp</span><br><span class="line">- Src</span><br><span class="line">  - main.cpp</span><br><span class="line">- CMakeLists.txt</span><br></pre></td></tr></table></figure>
+<h2 id="c-cpp-properties-json-2"><a href="#c-cpp-properties-json-2" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h2><blockquote>
+<p>c_cpp_properties.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;MinGW64&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/Inc/&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c11&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;configurationProvider&quot;</span>: <span class="string">&quot;vector-of-bool.cmake-tools&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;compileCommands&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;/build/compile_commands.json&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="launch-json-2"><a href="#launch-json-2" class="headerlink" title="launch.json"></a>launch.json</h2><blockquote>
+<p>launch.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Launch CMake-built program&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;command:cmake.launchTargetPath&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:/mingw64/bin/gdb.exe&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="settings-json-2"><a href="#settings-json-2" class="headerlink" title="settings.json"></a>settings.json</h2><blockquote>
+<p>settings.json</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;files.defaultLanguage&quot;: &quot;cpp&quot;, &#x2F;&#x2F; ctrl+N新建文件后默认的语言</span><br><span class="line">    &quot;editor.formatOnType&quot;: true, &#x2F;&#x2F; 输入时就进行格式化，默认触发字符较少，分号可以触发</span><br><span class="line">    &quot;code-runner.saveFileBeforeRun&quot;: true, &#x2F;&#x2F; run code前保存</span><br><span class="line">    &quot;C_Cpp.clang_format_sortIncludes&quot;: true, &#x2F;&#x2F; 格式化时调整include的顺序（按字母排序）</span><br><span class="line">    &quot;files.associations&quot;: &#123;</span><br><span class="line">        &quot;array&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;atomic&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;*.tcc&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cctype&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;clocale&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cmath&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cstdarg&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cstddef&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cstdint&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cstdio&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cstdlib&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cwchar&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cwctype&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;deque&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;unordered_map&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;vector&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;exception&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;algorithm&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;map&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;memory&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;memory_resource&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;optional&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;string&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;string_view&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;system_error&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;tuple&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;type_traits&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;utility&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;fstream&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;initializer_list&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;iosfwd&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;iostream&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;istream&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;limits&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;new&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;ostream&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;sstream&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;stdexcept&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;streambuf&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;typeinfo&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;list&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;set&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;cstring&quot;: &quot;cpp&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;files.exclude&quot;: &#123;</span><br><span class="line">        &quot;**&#x2F;.classpath&quot;: true,</span><br><span class="line">        &quot;**&#x2F;.project&quot;: true,</span><br><span class="line">        &quot;**&#x2F;.settings&quot;: true,</span><br><span class="line">        &quot;**&#x2F;.factorypath&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="CMakeLists-txt"><a href="#CMakeLists-txt" class="headerlink" title="CMakeLists.txt"></a>CMakeLists.txt</h2><blockquote>
+<p>CMakeLists.txt</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最低CMake版本要求</span></span><br><span class="line"><span class="string">cmake_minimum_required(VERSION</span> <span class="number">3.10</span><span class="number">.0</span><span class="string">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 项目名称</span></span><br><span class="line"><span class="string">project(cmake-test)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置C/C++标准</span></span><br><span class="line"><span class="string">set(CMAKE_C_STANDARD</span> <span class="number">11</span><span class="string">)</span></span><br><span class="line"><span class="string">set(CMAKE_CXX_STANDARD</span> <span class="number">17</span><span class="string">)</span></span><br><span class="line"><span class="string">set(CMAKE_CXX_STANDARD_REQUIRED</span> <span class="string">ON)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 头文件路径</span></span><br><span class="line"><span class="string">include_directories(&quot;Inc&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 枚举头文件</span></span><br><span class="line"><span class="string">file(GLOB_RECURSE</span> <span class="string">INCLUDES</span> <span class="string">&quot;Inc/*.h&quot;</span> <span class="string">&quot;Inc/*.hpp&quot;</span><span class="string">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 枚举源文件</span></span><br><span class="line"><span class="string">aux_source_directory(&quot;Src&quot;</span> <span class="string">SOURCES)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出路径</span></span><br><span class="line"><span class="string">set(EXECUTABLE_OUTPUT_PATH</span> <span class="string">$&#123;PROJECT_BINARY_DIR&#125;/bin)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成可执行的文件</span></span><br><span class="line"><span class="string">add_executable($&#123;PROJECT_NAME&#125;</span> <span class="string">$&#123;SOURCES&#125;</span> <span class="string">$&#123;INCLUDES&#125;)</span></span><br></pre></td></tr></table></figure>
+<h1 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML+CSS"></a>HTML+CSS</h1><p>插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Auto Close Tag</span><br><span class="line">Auto Rename Tag</span><br><span class="line">ESLint</span><br><span class="line">HTML CSS Support</span><br><span class="line">CSS Peek</span><br><span class="line">Live Server</span><br><span class="line">Path Intellisense</span><br><span class="line">Vetur</span><br></pre></td></tr></table></figure>
+<h1 id="MatLab"><a href="#MatLab" class="headerlink" title="MatLab"></a>MatLab</h1><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;matlab.mlintpath&quot;</span>: <span class="string">&quot;D:\\MATLAB\\R2018b\\bin\\win64\\mlint.exe&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;files.associations&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;*.m&quot;</span>: <span class="string">&quot;matlab&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;[matlab]&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;files.encoding&quot;</span>: <span class="string">&quot;gb2312&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;files.autoGuessEncoding&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;files.exclude&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;**/.classpath&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.project&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.settings&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;**/.factorypath&quot;</span>: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;matlab.linterEncoding&quot;</span>: <span class="string">&quot;gb2312&quot;</span>, <span class="comment">//改变错误信息中文编码方式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" rel="tag"><i class="fa fa-tag"></i>使用手册</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E5%85%B6%E4%BB%96/minecraft/" rel="prev" title="minecraft">
+      <i class="fa fa-chevron-left"></i> minecraft
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E5%85%B6%E4%BB%96/%E7%90%90%E7%A2%8E/" rel="next" title="琐碎">
+      琐碎 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java"><span class="nav-number">1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA"><span class="nav-number">1.1.</span> <span class="nav-text">IDEA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-number">2.</span> <span class="nav-text">Python</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda"><span class="nav-number">2.1.</span> <span class="nav-text">anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PyCharm"><span class="nav-number">2.2.</span> <span class="nav-text">PyCharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#manim"><span class="nav-number">2.3.</span> <span class="nav-text">manim</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E4%BE%9D%E8%B5%96%E7%8E%AF%E5%A2%83"><span class="nav-number">2.3.1.</span> <span class="nav-text">前置依赖环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CTEX%E5%AD%97%E4%BD%93%E6%94%AF%E6%8C%81"><span class="nav-number">2.3.2.</span> <span class="nav-text">CTEX字体支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8"><span class="nav-number">2.3.3.</span> <span class="nav-text">自动补全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.4.</span> <span class="nav-text">相关命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode"><span class="nav-number">3.</span> <span class="nav-text">vscode</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-number">4.</span> <span class="nav-text">C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#c-cpp-properties-json"><span class="nav-number">4.1.</span> <span class="nav-text">c_cpp_properties.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#launch-json"><span class="nav-number">4.2.</span> <span class="nav-text">launch.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#settings-json"><span class="nav-number">4.3.</span> <span class="nav-text">settings.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tasks-json"><span class="nav-number">4.4.</span> <span class="nav-text">tasks.json</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-1"><span class="nav-number">5.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#c-cpp-properties-json-1"><span class="nav-number">5.1.</span> <span class="nav-text">c_cpp_properties.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#launch-json-1"><span class="nav-number">5.2.</span> <span class="nav-text">launch.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#settings-json-1"><span class="nav-number">5.3.</span> <span class="nav-text">settings.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tasks-json-1"><span class="nav-number">5.4.</span> <span class="nav-text">tasks.json</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CMake"><span class="nav-number">6.</span> <span class="nav-text">CMake</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#c-cpp-properties-json-2"><span class="nav-number">6.1.</span> <span class="nav-text">c_cpp_properties.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#launch-json-2"><span class="nav-number">6.2.</span> <span class="nav-text">launch.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#settings-json-2"><span class="nav-number">6.3.</span> <span class="nav-text">settings.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CMakeLists-txt"><span class="nav-number">6.4.</span> <span class="nav-text">CMakeLists.txt</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-CSS"><span class="nav-number">7.</span> <span class="nav-text">HTML+CSS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MatLab"><span class="nav-number">8.</span> <span class="nav-text">MatLab</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GbtH</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GbtH</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
