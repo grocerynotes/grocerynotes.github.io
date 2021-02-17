@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>配置Hexo静态博客</title>
+    <url>/2021/02/17/%E6%8A%98%E8%85%BE/Hexo/</url>
+    <content><![CDATA[<h2 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h2><ul>
+<li><p><code>git</code></p>
+</li>
+<li><p><code>node v12.15.0</code></p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo init     <span class="comment"># 初始化静态博客</span></span><br><span class="line">npm install   <span class="comment"># 安装依赖项</span></span><br><span class="line">hexo server   <span class="comment"># 开启本地服务端口</span></span><br></pre></td></tr></table></figure>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><h3 id="更换"><a href="#更换" class="headerlink" title="更换"></a>更换</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p><code>\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<h3 id="分栏"><a href="#分栏" class="headerlink" title="分栏"></a>分栏</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo new page tags         <span class="comment"># 生成标签页</span></span><br><span class="line">hexo new page categories   <span class="comment"># 生成目录页</span></span><br></pre></td></tr></table></figure>
+<p><code>\source\categories\index.md</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
+<p><code>\source\tags\index.md</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br></pre></td></tr></table></figure>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p><code>\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+<p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="折叠"><a href="#折叠" class="headerlink" title="折叠"></a>折叠</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><code>Fromt-matter</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">description:</span> <span class="string">显示出来的摘要内容</span></span><br><span class="line"><span class="attr">math:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="GitHub-Pages部署"><a href="#GitHub-Pages部署" class="headerlink" title="GitHub Pages部署"></a>GitHub Pages部署</h2><p><code>\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://example.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://grocerynotes.github.io</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:grocerynotes/grocerynotes.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="mathjax支持"><a href="#mathjax支持" class="headerlink" title="mathjax支持"></a>mathjax支持</h2><h3 id="更换渲染器"><a href="#更换渲染器" class="headerlink" title="更换渲染器"></a>更换渲染器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<h3 id="开启渲染"><a href="#开启渲染" class="headerlink" title="开启渲染"></a>开启渲染</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="禁用渲染"><a href="#禁用渲染" class="headerlink" title="禁用渲染"></a>禁用渲染</h3><p><code>\scaffolds\post.md</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">math:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h3 id="解决转义冲突"><a href="#解决转义冲突" class="headerlink" title="解决转义冲突"></a>解决转义冲突</h3><p><code>\node_modules\kramed\lib\rules\inline.js</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">/**</span></span><br><span class="line"> <span class="string">*</span> <span class="string">修改下列转义规则</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">escape:</span> <span class="string">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">em:</span> <span class="string">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line"><span class="string">*/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">escape:</span> <span class="string">/^\\([`*\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"><span class="attr">em:</span> <span class="string">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>不等式</title>
     <url>/2021/02/16/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E4%B8%8D%E7%AD%89%E5%BC%8F/</url>
     <content><![CDATA[<h1 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h1><h2 id="绝对值不等式-三角不等式"><a href="#绝对值不等式-三角不等式" class="headerlink" title="绝对值不等式/三角不等式"></a>绝对值不等式/三角不等式</h2><p>对任意实数$a$和$b$,都有</p>
@@ -20,52 +69,6 @@
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建基于Hexo的静态博客</title>
-    <url>/2021/02/17/%E6%8A%98%E8%85%BE/Hexo/</url>
-    <content><![CDATA[<h2 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h2><ul>
-<li><p><code>git</code></p>
-</li>
-<li><p><code>node v12.15.0</code></p>
-</li>
-</ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo init     <span class="comment"># 初始化静态博客</span></span><br><span class="line">npm install   <span class="comment"># 安装依赖项</span></span><br><span class="line">hexo server   <span class="comment"># 开启本地服务端口</span></span><br></pre></td></tr></table></figure>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><h3 id="更换"><a href="#更换" class="headerlink" title="更换"></a>更换</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p><code>\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-<h3 id="分栏"><a href="#分栏" class="headerlink" title="分栏"></a>分栏</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo new page tags         <span class="comment"># 生成标签页</span></span><br><span class="line">hexo new page categories   <span class="comment"># 生成目录页</span></span><br></pre></td></tr></table></figure>
-<p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br></pre></td></tr></table></figure>
-<p><code>\source\categories\index.md</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
-<p><code>\source\tags\index.md</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br></pre></td></tr></table></figure>
-<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
-<h2 id="GitHub-Pages部署"><a href="#GitHub-Pages部署" class="headerlink" title="GitHub Pages部署"></a>GitHub Pages部署</h2><p><code>\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:grocerynotes/grocerynotes.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="mathjax支持"><a href="#mathjax支持" class="headerlink" title="mathjax支持"></a>mathjax支持</h2><h3 id="更换渲染器"><a href="#更换渲染器" class="headerlink" title="更换渲染器"></a>更换渲染器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<h3 id="mathjax渲染支持"><a href="#mathjax渲染支持" class="headerlink" title="mathjax渲染支持"></a>mathjax渲染支持</h3><p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="禁止mathjax默认渲染"><a href="#禁止mathjax默认渲染" class="headerlink" title="禁止mathjax默认渲染"></a>禁止mathjax默认渲染</h3><p><code>\scaffolds\post.md</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">math:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<h3 id="修补转义冲突"><a href="#修补转义冲突" class="headerlink" title="修补转义冲突"></a>修补转义冲突</h3><p><code>\node_modules\kramed\lib\rules\inline.js</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">/**</span></span><br><span class="line"> <span class="string">*</span> <span class="string">修改下列转义规则</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">escape:</span> <span class="string">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">em:</span> <span class="string">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line"><span class="string">*/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">escape:</span> <span class="string">/^\\([`*\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"><span class="attr">em:</span> <span class="string">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>
-<h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<p><code>\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-<p><code>\themes\next_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
       </tags>
   </entry>
 </search>
