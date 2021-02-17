@@ -210,7 +210,46 @@ p_1a_1+p_2a_2\ge a_1^{p_1}a_2^{p_2}</script><p>中, 令 $p_1=\frac{1}{p}, p_2=\f
 <script type="math/tex; mode=display">
 (1+x)^{\alpha} \ge 1+\alpha x</script><p>当且仅当 $x=0$ 时等号成立.</p>
 <p><strong>证</strong></p>
-]]></content>
+<p>显然当 $x=0$ 时等号成立.</p>
+<p>(1) $0&lt;\alpha &lt; 1$ 令</p>
+<script type="math/tex; mode=display">
+\alpha = \frac{m}{n}, 1\le m < n</script><p>其中 $m, n$ 为正整数, 则由平均值不等式</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(1+x)^{\alpha} &=(1+x)^{\frac{m}{n}}\\
+&=\sqrt[n]{\underbrace{(1+x)\cdots(1+x)}_{m}\overbrace{1\cdots1}^{n-m}}\\
+&\le \frac{m(1+x)+(n-m)}{n}\\
+&=\frac{mx+n}{n}\\
+&=1+\alpha x
+\end{aligned}</script><p>由平均值不等式知等号仅当 $1+x=1$, 即 $x=0$ 时成立.</p>
+<p>(2) $\alpha &gt;1$</p>
+<p>(a) 如果 $1+\alpha x<0$, 因为 $x>-1$, 所以 $1+x&gt;0$.</p>
+<p>所以 $(1+x)^{\alpha} &gt;0$, 从而</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha} > 1+\alpha x</script><p>(b) 如果 $1+\alpha x \ge 0$, 因为 $\alpha &gt;1$, 所以 $0&lt;\frac{1}{\alpha}&lt;1$, 故由 (1) 得</p>
+<script type="math/tex; mode=display">
+0\le (1+\alpha x)^{\frac{1}{\alpha}}\le 1+\frac{1}{\alpha}\cdot\alpha x=1+x</script><p>乘方后得</p>
+<script type="math/tex; mode=display">
+1+\alpha x \le (1+x)^{\alpha}</script><p>即</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha}\ge 1+\alpha x</script><p>上式中等号仅当 $x=0$ 时才成立.</p>
+<p>(3) $\alpha&lt;0$</p>
+<p>(a) 如果 $1+\alpha x&lt; 0$, 那么由 $1+x&gt;0$ 知</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha}> 1+\alpha x</script><p>(b) 如果 $1+\alpha x\ge 0$, 存在正整数 $n&gt;1$, 使得 $0&lt;-\frac{\alpha}{n}&lt;1$, 由 (1) 得</p>
+<script type="math/tex; mode=display">
+0<(1+x)^{-\frac{\alpha}{n}}\le1-\frac{\alpha}{n}x</script><p>上式两边都是正数, 两边取倒数, 得</p>
+<script type="math/tex; mode=display">
+(1+x)^{\frac{\alpha}{n}}\ge \frac{1}{1-\frac{\alpha}{n}x}=\frac{1+\frac{\alpha}{n}x}{(1-\frac{\alpha}{n}x)(1+\frac{\alpha}{n}x)}=\frac{1+\frac{\alpha}{n}x}{1-(\frac{\alpha}{n}x)^2}\ge 1+\frac{\alpha}{n}x</script><p>乘方后, 由于$\frac{\alpha}{n}x&gt;-1, n &gt; 1$, 则由 (2) 得</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha} \ge (1+\frac{\alpha}{n}x)^n \ge 1+\frac{\alpha}{n}nx=1+\alpha x</script><p>等号仅当 $x=0$ 时才成立.</p>
+<p>证毕.</p>
+<p><strong>注</strong>  可以证明当 $\alpha$ 为实数时, 定理仍然成立, 其基本思想是用有理数列逼近无理数 $\alpha$. 例如当 $0&lt;\alpha &lt;1$ 时, 取一列有理数 $r_1, r_2, \cdots, r_n, \cdots$ 满足条件 $0&lt;r_n&lt;1$, 且以 $\{r_n\}$ 逼近 $\alpha$, 于是</p>
+<script type="math/tex; mode=display">
+(1+x)^{r_n}\le 1+r_nx, n=1, 2, \cdots</script><p>利用极限理论可以证明</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha} \le 1+\alpha x</script><p>且可以证明当且仅当 $x = 0$ 时等号成立. 类似地也可以用极限的思想来证明, 当 $\alpha$ 为实数且当 $\alpha<0$ 或 $\alpha > 1$ 时, 定理仍然成立.</p>
+<h1 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h1><h2 id="代数形式"><a href="#代数形式" class="headerlink" title="代数形式"></a>代数形式</h2><h3 id="推广的代数形式"><a href="#推广的代数形式" class="headerlink" title="推广的代数形式"></a>推广的代数形式</h3><h3 id="推广的权方和不等式"><a href="#推广的权方和不等式" class="headerlink" title="推广的权方和不等式"></a>推广的权方和不等式</h3><h2 id="向量形式"><a href="#向量形式" class="headerlink" title="向量形式"></a>向量形式</h2><h2 id="三角形式"><a href="#三角形式" class="headerlink" title="三角形式"></a>三角形式</h2><h2 id="积分形式"><a href="#积分形式" class="headerlink" title="积分形式"></a>积分形式</h2>]]></content>
       <categories>
         <category>数学</category>
         <category>数学分析</category>
