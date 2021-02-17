@@ -27,11 +27,13 @@
 <meta property="og:site_name" content="GroceryNotes">
 <meta property="og:description" content="数学不等式证明">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qungz.photo.store.qq.com/qun-qungz/V50kh60C3U4SFH4bdsk91FkeOV3q83eU/V5bCQA4NjgyOTI4MTgaHC1gqlcWAw!!/800?w5=787&h5=479&rf=viewer_421">
 <meta property="article:published_time" content="2021-02-16T06:14:09.818Z">
-<meta property="article:modified_time" content="2021-02-17T11:27:15.768Z">
+<meta property="article:modified_time" content="2021-02-17T14:04:35.227Z">
 <meta property="article:author" content="GbtH">
 <meta property="article:tag" content="不等式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qungz.photo.store.qq.com/qun-qungz/V50kh60C3U4SFH4bdsk91FkeOV3q83eU/V5bCQA4NjgyOTI4MTgaHC1gqlcWAw!!/800?w5=787&h5=479&rf=viewer_421">
 
 <link rel="canonical" href="https://grocerynotes.github.io/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E4%B8%8D%E7%AD%89%E5%BC%8F/">
 
@@ -215,7 +217,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-17 19:27:15" itemprop="dateModified" datetime="2021-02-17T19:27:15+08:00">2021-02-17</time>
+                <time title="修改时间：2021-02-17 22:04:35" itemprop="dateModified" datetime="2021-02-17T22:04:35+08:00">2021-02-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -243,10 +245,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h1><h2 id="绝对值不等式-三角不等式"><a href="#绝对值不等式-三角不等式" class="headerlink" title="绝对值不等式/三角不等式"></a>绝对值不等式/三角不等式</h2><p>对任意实数$a$和$b$,都有</p>
+        <h1 id="绝对值不等式-三角不等式"><a href="#绝对值不等式-三角不等式" class="headerlink" title="绝对值不等式/三角不等式"></a>绝对值不等式/三角不等式</h1><p>对任意实数 $a$ 和 $b$, 都有</p>
 <script type="math/tex; mode=display">
 ||a|-|b||\le |a+b|\le|a|+|b|</script><p><strong>证</strong> </p>
-<p>对任意实数$a$和$b$,都有</p>
+<p>对任意实数 $a$ 和 $b$, 都有</p>
 <script type="math/tex; mode=display">
 -|a||b|\le ab\le |a||b|</script><p>所以</p>
 <script type="math/tex; mode=display">
@@ -254,7 +256,82 @@
 <script type="math/tex; mode=display">
 (|a|-|b|)^2\le(a+b)^2\le(|a|+|b|)^2</script><p>开方得</p>
 <script type="math/tex; mode=display">
-|a|-|b|\le a+b\le|a|+|b|</script>
+|a|-|b|\le a+b\le|a|+|b|</script><p>证毕.</p>
+<h1 id="平均值不等式"><a href="#平均值不等式" class="headerlink" title="平均值不等式"></a>平均值不等式</h1><p>对任意 $n$ 个正数 $a_1, a_2, \cdots, a_n$, 有</p>
+<script type="math/tex; mode=display">
+\frac{a_1+a_2+\cdots+a_n}{n}\ge\sqrt[n]{a_1a_2\cdots a_n}\ge \frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}}</script><p> 等号当且仅当 $a_1, a_2, \cdots, a_n$ 全部相等时成立.</p>
+<p><strong>证</strong></p>
+<p>先证明左边的不等式</p>
+<script type="math/tex; mode=display">
+\frac{a_1+a_2+\cdots+a_n}{n}\ge\sqrt[n]{a_1a_2\cdots a_n}</script><p>当 $n=1, 2$ 时, 不等式显然成立.</p>
+<p>当 $n=4$ 时, </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{a_1+a_2+a_3+a_4}{4}&\ge \frac{2\sqrt[2]{a_1a_2}+2\sqrt[2]{a_3a_4}}{4}\\
+&=\frac{\sqrt[2]{a_1a_2}+\sqrt[2]{a_3a_4}}{2}\\
+&\ge \sqrt[4]{a_1a_2a_3a_4}
+\end{aligned}</script><p>等号当且仅当 $a_1, a_2, a_3, a_4$ 全部相等时成立.</p>
+<p>当 $n=2^k(k\in N^+)$ 时, 不等式是 $\frac{a+b}{2}\ge \sqrt{ab}$ 的直接推论.</p>
+<p>当 $n\ne 2^k$ 时, 取 $l\in N^+$, 使 $2^{l-1}&lt;n&lt;2^l$. 记</p>
+<script type="math/tex; mode=display">
+\sqrt[n]{a_1a_2\cdots a_n}=\bar{a}</script><p>在 $a_1, a_2, \cdots, a_n$ 后面加上$(2^l-n)$ 个$\bar{a}$, 将其扩充成 $2^l$ 个正数. 对这 $2^l$ 个正数应用不等式, 得到</p>
+<script type="math/tex; mode=display">
+\frac{1}{2^l}[a_1+a_2+\cdots+a_n+(2^l-n)\bar{a}]\ge (a_1a_2\cdots a_n \bar{a}^{2^l-n})^\frac{1}{2^l}=(\bar{a}^n\bar{a}^{2^l-n})^\frac{1}{2^l}=\bar{a}</script><p>整理后即有</p>
+<script type="math/tex; mode=display">
+\frac{a_1+a_2+\cdots+a_n}{n}\ge\sqrt[n]{a_1a_2\cdots a_n}</script><p>对 $\frac{1}{a_1}, \frac{1}{a_2}, \cdots, \frac{1}{a_n}$ 使用上面的结论, 便得到右边的不等式.</p>
+<p>证毕.</p>
+<h1 id="加权平均不等式"><a href="#加权平均不等式" class="headerlink" title="加权平均不等式"></a>加权平均不等式</h1><p>设 $a_1, a_2, \cdots, a_n$ 为正数, $p_1, p_2, \cdots, p_n$ 都是正实数, 并且 $p_1+p_2+\cdots+p_n=1$, 那么</p>
+<script type="math/tex; mode=display">
+p_1a_1+p_2a_2+\cdots+p_na_n\ge a_1^{p_1}a_2^{p_2}\cdots a_n^{p_n}</script><p><strong>证</strong></p>
+<p>设正有理数 $p_1, p_2, \cdots, p_n$ 的公分母为 $k$, </p>
+<script type="math/tex; mode=display">
+p_1 = \frac{m_1}{k}, p_2 = \frac{m_2}{k}, \cdots, p_n = \frac{m_n}{k}</script><p>因为 $p_1+p_2+\cdots+p_n=1$</p>
+<p>所以 $m_1+m_2+\cdots + m_n=k(p_1+p_2+\cdots+p_n)=k$</p>
+<p>在平均值不等式中取 $m_1$ 个 $a_1$, $m_2$ 个 $a_2$, $\cdots$, $m_n$ 个 $a_n$ (共取 $k$ 个元素), 得</p>
+<script type="math/tex; mode=display">
+\frac{m_1a_1+m_2a_2+\cdots+m_na_n}{k}\ge(a_1^{m_1}a_2^{m_2}\cdots a_n^{m_n})^\frac{1}{k}</script><p>由 $m_1, m_2, \cdots, m_n$ 的定义, 立即得</p>
+<script type="math/tex; mode=display">
+p_1a_1+p_2a_2+\cdots+p_na_n\ge a_1^{p_1}a_2^{p_2}\cdots a_n^{p_n}</script><p>证毕.</p>
+<h1 id="W-H-Young不等式"><a href="#W-H-Young不等式" class="headerlink" title="W.H.Young不等式"></a>W.H.Young不等式</h1><p>设 $p, q$ 为实数, 满足条件 $1&lt;p&lt;+\infty, 1&lt;q&lt;+\infty, \frac{1}{p}+\frac{1}{q}=1$, ( $p, q$ 互称为共轭指标), $a, b$ 为正数, 则</p>
+<script type="math/tex; mode=display">
+\frac{a^p}{p}+\frac{b^q}{q}\ge ab</script><p><strong>证</strong></p>
+<p>在加权平均不等式</p>
+<script type="math/tex; mode=display">
+p_1a_1+p_2a_2\ge a_1^{p_1}a_2^{p_2}</script><p>中, 令 $p_1=\frac{1}{p}, p_2=\frac{1}{q}$, 则 $p_1+q_1=1$, 再令 $a_1=a^p, a_2=b^q$, 即得</p>
+<script type="math/tex; mode=display">
+\frac{a^p}{p}+\frac{b^q}{q}\ge ab</script><p>证毕.</p>
+<p>W.H.Young不等式有如下几何意义, 如图在直角坐标系 $xOy$ 中, 设 $OA=a, OB=b$, 则矩阵 $OACB$ 的面积 $S_{OACB}=ab$, 设曲线 $y=x^{p-1}$ 交 $AC$ 的延长线于 $P$, 交 $BC$ 于 $Q$, 则</p>
+<script type="math/tex; mode=display">
+S_{OAPQ} = \int_0^ax^{p-1}dx=\frac{a^p}{p}\\
+S_{OBQ} = \int_0^bx^{q-1}dx=\frac{b^q}{q}</script><p>由 $S_{OAPQ}+S_{OBQ}\ge S_{OACB}$ 知</p>
+<script type="math/tex; mode=display">
+\frac{a^p}{p}+\frac{b^q}{q}\ge ab</script><p>等号成立当且仅当 $P$ 和 $C$ 重合, 即 $b=a^{p-1}$ 或 $a^p=b^q$.</p>
+<p><strong>注</strong>  当 $p=2$ 时, $q=2$, 此时 W.H.Young 不等式即为 $\frac{a^2+b^2}{2}\ge ab$, 此时在图中曲线 $OQP$ 成为直线 $y=x$ 上的线段.</p>
+<p><img src="http://qungz.photo.store.qq.com/qun-qungz/V50kh60C3U4SFH4bdsk91FkeOV3q83eU/V5bCQA4NjgyOTI4MTgaHC1gqlcWAw!!/800?w5=787&h5=479&rf=viewer_421" width=100%></p>
+<h1 id="伯努利不等式"><a href="#伯努利不等式" class="headerlink" title="伯努利不等式"></a>伯努利不等式</h1><p>设 $x&gt;-1$, 且 $x\ne 0$, $n$ 为大于 $1$ 的自然数, 则</p>
+<script type="math/tex; mode=display">
+(1+x)^n>1+nx</script><p><strong>证</strong></p>
+<p>当 $n=2$ 由 $x\ne 0$, 知</p>
+<script type="math/tex; mode=display">
+(1+x)^2 = 1+x^2+2x>1+2x</script><p>假设 $n=k$ ( $k\ge 2$ 为正整数) 时命题成立, 即</p>
+<script type="math/tex; mode=display">
+(1+x)^k>1+kx</script><p>则当 $n=k+1$ 时, </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(1+x)^{k+1} &= (1+x)^k(1+x)\\
+& >(1+kx)(1+x)\\
+&=1+x+kx+kx^2\\
+&>1+(k+1)x
+\end{aligned}</script><p>由数学归纳法知命题成立.</p>
+<p>证毕.</p>
+<h2 id="推广的伯努利不等式"><a href="#推广的伯努利不等式" class="headerlink" title="推广的伯努利不等式"></a>推广的伯努利不等式</h2><p>设 $\alpha$ 为有理数, $x&gt;-1$, </p>
+<p>(1) 如果 $0&lt;\alpha &lt; 1$, 则</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha} \le 1+\alpha x</script><p>(2) 如果 $\alpha &lt; 0 $ 或者 $\alpha &gt;1$, 则</p>
+<script type="math/tex; mode=display">
+(1+x)^{\alpha} \ge 1+\alpha x</script><p>当且仅当 $x=0$ 时等号成立.</p>
+<p><strong>证</strong></p>
+
     </div>
 
     
@@ -273,7 +350,7 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%85%B6%E4%BB%96/Hexo/" rel="next" title="Hexo相关配置">
+    <a href="/%E5%85%B6%E4%BB%96/Hexo/" rel="next" title="Hexo相关配置">
       Hexo相关配置 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -334,7 +411,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">不等式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F-%E4%B8%89%E8%A7%92%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">绝对值不等式&#x2F;三角不等式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F-%E4%B8%89%E8%A7%92%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">绝对值不等式&#x2F;三角不等式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">平均值不等式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E6%9D%83%E5%B9%B3%E5%9D%87%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">加权平均不等式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#W-H-Young%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">W.H.Young不等式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%AF%E5%8A%AA%E5%88%A9%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">伯努利不等式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E5%B9%BF%E7%9A%84%E4%BC%AF%E5%8A%AA%E5%88%A9%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">5.1.</span> <span class="nav-text">推广的伯努利不等式</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
