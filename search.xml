@@ -683,16 +683,16 @@ a^n - 1= (a-1)&(a^{n-1}+a^{n-2}+a^{n-3}+\cdots+a^2+a+1)
 \lim_{n\to\infty}\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}=ab</script><p><strong>证</strong></p>
 <p>令 $d_n = b_n - b$, 则有</p>
 <script type="math/tex; mode=display">
-\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n} = \frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b</script><p>因为 $\lim\limits_{n\to\infty} a_n = a$, 由数列极限的有界性可知, $\exist M\in R^+$, 使得 $\forall n\in N^+, |a_n|\le M$, 则</p>
+\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n} = \frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b</script><p>因为 $\lim\limits_{n\to\infty} a_n = a$, 由数列极限的有界性可知, $\exists M\in R^+$, 使得 $\forall n\in N^+, |a_n|\le M$, 则</p>
 <script type="math/tex; mode=display">
-\left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}\right|\le \frac{|a_1||d_n|+|a_2||d_{n-1}|\cdots+|a_n||d_1|}{n}\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}</script><p>因为 $\lim\limits_{n\to\infty} b_n = b$, 则 $\forall \varepsilon &gt; 0, \exist N_b, \forall n&gt;N_b, |d_n-0| = |b_n-b|&lt;\varepsilon$</p>
+\left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}\right|\le \frac{|a_1||d_n|+|a_2||d_{n-1}|\cdots+|a_n||d_1|}{n}\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}</script><p>因为 $\lim\limits_{n\to\infty} b_n = b$, 则 $\forall \varepsilon &gt; 0, \exists N_b, \forall n&gt;N_b, |d_n-0| = |b_n-b|&lt;\varepsilon$</p>
 <p>所以 $\lim\limits_{n\to\infty} |d_n| = 0$, 故有</p>
 <script type="math/tex; mode=display">
-\lim_{n\to\infty} \frac{|d_1|+|d_2|+\cdots+|d_n|}{n} = 0</script><p>因此, $\forall \varepsilon &gt; 0, \exist N_d,\forall n&gt;N_d$, 有</p>
+\lim_{n\to\infty} \frac{|d_1|+|d_2|+\cdots+|d_n|}{n} = 0</script><p>因此, $\forall \varepsilon &gt; 0, \exists N_d,\forall n&gt;N_d$, 有</p>
 <script type="math/tex; mode=display">
 \frac{|d_1|+|d_2|+\cdots+|d_n|}{n} <\frac{\varepsilon}{2M}</script><p>又因为 $\lim\limits_{n\to\infty} a_n = a$, 故有</p>
 <script type="math/tex; mode=display">
-\lim_{n\to\infty} \frac{a_1+a_2+\cdots+a_n}{n} = a</script><p>因此, $\forall \varepsilon &gt; 0, \exist N_a,\forall n&gt;N_a$, 有</p>
+\lim_{n\to\infty} \frac{a_1+a_2+\cdots+a_n}{n} = a</script><p>因此, $\forall \varepsilon &gt; 0, \exists N_a,\forall n&gt;N_a$, 有</p>
 <script type="math/tex; mode=display">
 \left|\frac{a_1+a_2+\cdots+a_n}{n} -a\right|<\frac{\varepsilon}{2|b|+1}</script><p>取 $N = \max\{N_d, N_a\}, \forall n&gt;N$, 有</p>
 <script type="math/tex; mode=display">
