@@ -50,35 +50,6 @@
       </tags>
   </entry>
   <entry>
-    <title>软件技巧性用法</title>
-    <url>/%E5%85%B6%E4%BB%96/%E8%BD%AF%E4%BB%B6%E6%8A%80%E5%B7%A7%E6%80%A7%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h1><ol>
-<li>QQ群上传图片到群相册可以当图床使用</li>
-</ol>
-<h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><ol>
-<li>百度云下载的视频上传到B站当播放器使用</li>
-</ol>
-<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><ol>
-<li>GitHub可用于搭建个人博客和同步微量文件</li>
-</ol>
-<h1 id="OneNote"><a href="#OneNote" class="headerlink" title="OneNote"></a>OneNote</h1><ol>
-<li>OneNote 思维导图：利用xmind自动生成</li>
-<li>OneNote 数学公式：利用typoa导出到word（需pandoc插件）后复制粘贴</li>
-<li>OneNote 代码高亮：利用vscode直接复制粘贴到一个1×1表格中，底纹设置RGB为39,40,34</li>
-</ol>
-<h1 id="VNote"><a href="#VNote" class="headerlink" title="VNote"></a>VNote</h1><ol>
-<li>VNote导出格式：v_native渲染样式和v_pure渲染代码块，必要时导出为html格式截长图</li>
-<li>VNote表格：利用<a href="https://tableconvert.com/">在线转换工具</a>转换excel数据后复制代码</li>
-</ol>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>使用手册</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>minecraft</title>
     <url>/%E5%85%B6%E4%BB%96/minecraft/</url>
     <content><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=842812754&bvid=BV1854y1z7q8&cid=257277039&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -117,6 +88,199 @@
       </categories>
       <tags>
         <tag>琐碎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件技巧性用法</title>
+    <url>/%E5%85%B6%E4%BB%96/%E8%BD%AF%E4%BB%B6%E6%8A%80%E5%B7%A7%E6%80%A7%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h1><ol>
+<li>QQ群上传图片到群相册可以当图床使用</li>
+</ol>
+<h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><ol>
+<li>百度云下载的视频上传到B站当播放器使用</li>
+</ol>
+<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><ol>
+<li>GitHub可用于搭建个人博客和同步微量文件</li>
+</ol>
+<h1 id="OneNote"><a href="#OneNote" class="headerlink" title="OneNote"></a>OneNote</h1><ol>
+<li>OneNote 思维导图：利用xmind自动生成</li>
+<li>OneNote 数学公式：利用typoa导出到word（需pandoc插件）后复制粘贴</li>
+<li>OneNote 代码高亮：利用vscode直接复制粘贴到一个1×1表格中，底纹设置RGB为39,40,34</li>
+</ol>
+<h1 id="VNote"><a href="#VNote" class="headerlink" title="VNote"></a>VNote</h1><ol>
+<li>VNote导出格式：v_native渲染样式和v_pure渲染代码块，必要时导出为html格式截长图</li>
+<li>VNote表格：利用<a href="https://tableconvert.com/">在线转换工具</a>转换excel数据后复制代码</li>
+</ol>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>使用手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拉普拉斯变换</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E5%B8%B8%E5%BE%AE%E5%88%86/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>由积分</p>
+<script type="math/tex; mode=display">
+F(s) = \int_0^{+\infty} e^{-st}f(t)dt</script><p>所定义的确定于复平面 $(\mathcal{Re}$ $s&gt;\sigma)$ 上的复变数 $s$ 的函数 $F(s)$, 称为函数 $f(t)$ 的拉普拉斯变换, 其中 $f(t)$ 于 $t\ge0$ 上有定义, 且满足不等式</p>
+<script type="math/tex; mode=display">
+\left|f(t)\right|<Me^{\sigma t}</script><p>这里 $M, \sigma$ 为某两个正常数. 我们称 $f(t)$ 为原函数,而 $F(s)$ 称为像函数, 记作 $\mathcal{L}[f(t)]$.</p>
+<h1 id="线性性质"><a href="#线性性质" class="headerlink" title="线性性质"></a>线性性质</h1><script type="math/tex; mode=display">
+\begin{aligned}
+&\mathcal{L}[\alpha f(t)+\beta f(t)]=\alpha\mathcal{L}[f(t)]+\beta \mathcal{L}[g(t)]\\
+&\mathcal{L}^{-1}[\alpha F(s)+\beta G(s)] = \alpha\mathcal{L}^{-1}[F(s)]+ \beta\mathcal{L}^{-1}[G(s)]
+\end{aligned}</script><h1 id="导数的拉普拉斯变换"><a href="#导数的拉普拉斯变换" class="headerlink" title="导数的拉普拉斯变换"></a>导数的拉普拉斯变换</h1><script type="math/tex; mode=display">
+\begin{aligned}
+&\mathcal{L}[f'(t)]=s\mathcal{L}[f(t)]-f(0)=sF(s)-f(0)\\
+&\mathcal{L}[f^{(n)}(t)]=s^nF(s)-s^{n-1}f(0)-s^{n-2}f'(0)-\cdots-f^{(n-1)}(0)
+\end{aligned}</script><h1 id="拉普拉斯变换表"><a href="#拉普拉斯变换表" class="headerlink" title="拉普拉斯变换表"></a>拉普拉斯变换表</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">原函数$f(t)$</th>
+<th style="text-align:left">像函数$F(s) = \int_0^{+\infty} e^{-st}f(t)dt$</th>
+<th>像函数$F(s)$的定义域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$1$</td>
+<td style="text-align:left">$\frac{1}{s}$</td>
+<td>$\mathcal{Re}$ $s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$t$</td>
+<td style="text-align:left">$\frac{1}{s^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$t^n(n&gt;-1)$</td>
+<td style="text-align:left">$\frac{n!}{s^{n+1}}$</td>
+<td>$\mathcal{Re}$$s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$e^{zt}$</td>
+<td style="text-align:left">$\frac{1}{s-z}$</td>
+<td>$\mathcal{Re}$ $s&gt;\mathcal{Re}$ $z$</td>
+</tr>
+<tr>
+<td style="text-align:left">$te^{zt}$</td>
+<td style="text-align:left">$\frac{1}{(s-z)^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;\mathcal{Re}$ $z$</td>
+</tr>
+<tr>
+<td style="text-align:left">$t^ne^{zt}(n&gt;-1)$</td>
+<td style="text-align:left">$\frac{n!}{(s-z)^{n+1}}$</td>
+<td>$\mathcal{Re}$ $s&gt;\mathcal{Re}$ $z$</td>
+</tr>
+<tr>
+<td style="text-align:left">$\sin \omega t$</td>
+<td style="text-align:left">$\frac{\omega}{s^2+\omega ^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$\cos \omega t$</td>
+<td style="text-align:left">$\frac{s}{s^2+\omega ^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$sh$ $\omega t$</td>
+<td style="text-align:left">$\frac{\omega}{s^2-\omega ^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;\Vert\omega\Vert$</td>
+</tr>
+<tr>
+<td style="text-align:left">$ch$ $\omega t$</td>
+<td style="text-align:left">$\frac{s}{s^2-\omega ^2}$</td>
+<td>$\mathcal{Re}$ $s&lt;\Vert\omega\Vert$</td>
+</tr>
+<tr>
+<td style="text-align:left">$t \sin \omega t$</td>
+<td style="text-align:left">$\frac{2s\omega}{(s^2+\omega^2)^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$t \cos \omega t$</td>
+<td style="text-align:left">$\frac{s^2-\omega ^2}{(s^2+\omega^2)^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;0$</td>
+</tr>
+<tr>
+<td style="text-align:left">$e^{\lambda t}\sin \omega t$</td>
+<td style="text-align:left">$\frac{\omega}{(s-\lambda)^2+\omega ^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;\lambda$</td>
+</tr>
+<tr>
+<td style="text-align:left">$e^{\lambda t}\cos \omega t$</td>
+<td style="text-align:left">$\frac{s-\lambda}{(s-\lambda)^2+\omega ^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;\lambda$</td>
+</tr>
+<tr>
+<td style="text-align:left">$te^{\lambda t}\sin\omega t$</td>
+<td style="text-align:left">$\frac{2\omega(s-\lambda)}{[(s-\lambda)^2+\omega^2]^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;\lambda$</td>
+</tr>
+<tr>
+<td style="text-align:left">$te^{\lambda t}\cos \omega t$</td>
+<td style="text-align:left">$\frac{(s-\lambda)^2-\omega^2}{[(s-\lambda)^2+\omega^2]^2}$</td>
+<td>$\mathcal{Re}$ $s&gt;\lambda$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p><strong>例</strong> $\frac{dx}{dt}-x=e^{2t}$, 满足初值条件 $x(0)=0$.</p>
+<p><strong>解</strong></p>
+<p>对等式两边同时进行拉普拉斯变换得</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+sX(s) - x(0)-X(s)=\frac{1}{s-2}
+\end{aligned}</script><p>可解出</p>
+<script type="math/tex; mode=display">
+X(s) = \frac{1}{(s-1)(s-2)}=\frac{1}{s-2}-\frac{1}{s-1}</script><p>对等式两边同时进行拉普拉斯逆变换得</p>
+<script type="math/tex; mode=display">
+x(t) = e^{2t}-e^t</script><p><strong>例</strong> $\frac{d^2x}{dt^2}+2\frac{dx}{dt}+x=e^{-t}$, 满足初值条件 $x(1) = x’(1)=0$.</p>
+<p><strong>解</strong></p>
+<p>令 $\tau = t-1$, 则原式化为</p>
+<script type="math/tex; mode=display">
+\frac{d^2x}{d\tau^2}+2\frac{dx}{d\tau}+x = e^{-(\tau + 1)}=\frac{1}{e}e^{-\tau}, x(0) = x'(0) = 0</script><p>对等式两边同时进行拉普拉斯变换得</p>
+<script type="math/tex; mode=display">
+s^2X(s)+2sX(s)+X(S)=\frac{1}{e}\cdot \frac{1}{s+1}</script><p>可解出</p>
+<script type="math/tex; mode=display">
+X(s) = \frac{1}{(s+1)^3}\cdot \frac{1}{e}</script><p>对等式两边同时进行拉普拉斯逆变换得</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&x(\tau) = \frac{1}{2e}\tau^2e^{-\tau}=\frac{1}{2}\tau^2e^{-\tau-1}\\
+&x(t) = \frac{1}{2}(t-1)^2e^{-t}
+\end{aligned}</script><p><strong>例</strong> $\frac{d^3x}{dt^3}+3\frac{d^2x}{dt^2}+3\frac{dx}{dt}+x=1$, 满足初值条件 $x(0)=x’(0)=x’’(0)=0$.</p>
+<p><strong>解</strong></p>
+<p>对等式两边同时进行拉普拉斯变换得</p>
+<script type="math/tex; mode=display">
+(s^3+3s^2+3s+1)X(s)=\frac{1}{s}</script><p>解出 $X(s)$ 并因式分解得</p>
+<script type="math/tex; mode=display">
+X(s) = \frac{1}{s(s+1)^3} = \frac{1}{s}-\frac{1}{s+1}-\frac{1}{(s+1)^2}-\frac{1}{(s+1)^3}</script><p>对等式两边同时进行拉普拉斯逆变换得</p>
+<script type="math/tex; mode=display">
+x(t) = 1-e^{-t}-te^{-t}-\frac{1}{2}t^2e^{-t}=1-\frac{1}{2}(t^2+2t+2)e^{-t}</script><p><strong>例</strong> $\frac{d^2x}{dt^2}+a^2x=b\sin at$, 满足初值条件 $x(0)=x_0, x’(0)=x_0’$, 其中 $a, b$ 为非零常数.</p>
+<p><strong>解</strong></p>
+<p>对等式两边同时进行拉普拉斯变换得</p>
+<script type="math/tex; mode=display">
+s^2X(s)-x_0s-x_0'+a^2X(s)=\frac{ab}{s^2+a^2}</script><p>可解出</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+X(s) &= \frac{ab}{(s^2+a^2)^2}+x_0\frac{s}{s^2+a^2}+x_0'\frac{1}{s^2+a^2}\\
+&= \frac{b}{2a}[\frac{1}{s^2+a^2}-\frac{s^2-a^2}{(s^2+a^2)^2}]+x_0\frac{s}{s^2+a^2}+x_0'\frac{1}{s^2+a^2}\\
+&= \frac{b}{2a^2}[\frac{a}{s^2+a^2}-a\frac{s^2-a^2}{(s^2+a^2)^2}]+x_0\frac{s}{s^2+a^2}+\frac{x_0'}{a}\frac{a}{s^2+a^2}\\
+\end{aligned}</script><p>对等式两边同时进行拉普拉斯逆变换得</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+x(t) &= \frac{b}{2a^2}(\sin at - at\cos at) + x_0\cos at+\frac{x_0'}{a}\sin at\\
+&=\frac{1}{2a^2}\left[(b+2ax_0')\sin at+a(2ax_0-bt)\cos at\right]
+\end{aligned}</script>]]></content>
+      <categories>
+        <category>数学</category>
+        <category>常微分</category>
+      </categories>
+      <tags>
+        <tag>拉普拉斯</tag>
       </tags>
   </entry>
   <entry>
@@ -332,6 +496,26 @@ f(x) = (b_1^2+b_2^2+\cdots+b_n^2)x^2+2(a_1b_2+a_2b_2+\cdots+a_nb_n)x+(a_1^2+a_2^
       </tags>
   </entry>
   <entry>
+    <title>恒等式</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E6%81%92%E7%AD%89%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="立方和差"><a href="#立方和差" class="headerlink" title="立方和差"></a>立方和差</h1><script type="math/tex; mode=display">
+\begin{aligned}
+&a^3+b^3 = (a+b)(a^2-ab+b^2)\\
+&a^3-b^3=(a-b)(a^2+ab+b^2)
+\end{aligned}</script><h1 id="n方差"><a href="#n方差" class="headerlink" title="n方差"></a>n方差</h1><script type="math/tex; mode=display">
+\begin{aligned}
+a^n-b^n = (a-b)&(a^{n-1}+a^{n-2}b+a^{n-3}b^2+\cdots+a^2b^{n-3}+ab^{n-2}+b^{n-1})\\
+a^n - 1= (a-1)&(a^{n-1}+a^{n-2}+a^{n-3}+\cdots+a^2+a+1)
+\end{aligned}</script>]]></content>
+      <categories>
+        <category>数学</category>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>恒等式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>取模运算公式</title>
     <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<script type="math/tex; mode=display">
@@ -340,6 +524,42 @@ f(x) = (b_1^2+b_2^2+\cdots+b_n^2)x^2+2(a_1b_2+a_2b_2+\cdots+a_nb_n)x+(a_1^2+a_2^
 &(a+b)\%n=(a\%n+b\%n)\%n \\
 &(a*b)\%n=(a\%n*b\%n)\%n
 \end{aligned}</script>]]></content>
+      <categories>
+        <category>计算机</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>递归</title>
+    <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E9%80%92%E5%BD%92/</url>
+    <content><![CDATA[<h1 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> &amp;count, <span class="keyword">char</span> A = <span class="string">&#x27;A&#x27;</span>, <span class="keyword">char</span> B = <span class="string">&#x27;B&#x27;</span>, <span class="keyword">char</span> C = <span class="string">&#x27;C&#x27;</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; A &lt;&lt; <span class="string">&quot; - &gt; &quot;</span> &lt;&lt; C &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		hanoi(n - <span class="number">1</span>, count, A, C, B);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; A &lt;&lt; <span class="string">&quot; - &gt; &quot;</span> &lt;&lt; C &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		hanoi(n - <span class="number">1</span>, count, B, A, C);</span><br><span class="line">	&#125;</span><br><span class="line">	++count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	hanoi(<span class="number">6</span>, count);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; count &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Quad</span> // 保存当前状态</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    Quad();</span><br><span class="line">    Quad(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b, <span class="keyword">char</span> c) : _n(n), _x(a), _y(b), _z(c) &#123;&#125;</span><br><span class="line">    <span class="keyword">int</span> _n;          <span class="comment">// 要移动的盘子数量</span></span><br><span class="line">    <span class="keyword">char</span> _x, _y, _z; <span class="comment">// 保存柱子名称</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> x, <span class="keyword">char</span> y, <span class="keyword">char</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">stack</span>&lt;Quad&gt; s;</span><br><span class="line">    s.push(Quad(n, x, y, z));</span><br><span class="line">    <span class="keyword">while</span> (!s.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        Quad q = s.top();</span><br><span class="line">        s.pop();</span><br><span class="line">        n = q._n;</span><br><span class="line">        x = q._x;</span><br><span class="line">        y = q._y;</span><br><span class="line">        z = q._z;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Move top disk from peg &quot;</span> &lt;&lt; q._x</span><br><span class="line">                      &lt;&lt; <span class="string">&quot; to peg &quot;</span> &lt;&lt; q._z &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//以栈push,所以三个操作都倒过来.</span></span><br><span class="line">            s.push(Quad(n - <span class="number">1</span>, y, x, z));</span><br><span class="line">            s.push(Quad(<span class="number">1</span>, x, y, z));</span><br><span class="line">            s.push(Quad(n - <span class="number">1</span>, x, z, y));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    hanoi(<span class="number">3</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">combination</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(k&gt;n)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k==n || k==<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> combination(n<span class="number">-1</span>,k<span class="number">-1</span>)+combination(n<span class="number">-1</span>,k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">triangle</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;=i;++j)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;combination(i,j)&lt;&lt;<span class="string">&quot;  &quot;</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	triangle(<span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>计算机</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>回溯</title>
+    <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/</url>
+    <content><![CDATA[<h1 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h1><p>给定一个没有重复数字的序列,返回其所有可能的全排列.</p>
+<blockquote>
+<p>示例:<br>输入: [1,2,3]<br>输出: [[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]]</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pailie</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; &amp;used, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;result, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; &amp;resset)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (result.size() == nums.size())  <span class="comment">//是否已经穷尽</span></span><br><span class="line">    &#123;</span><br><span class="line">        resset.push_back(result);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!used[i])  <span class="comment">//记录是否已经使用</span></span><br><span class="line">        &#123;</span><br><span class="line">            result.push_back(nums[i]);</span><br><span class="line">            used[i] = <span class="literal">true</span>;</span><br><span class="line">            pailie(nums, used, result, resset);</span><br><span class="line">            used[i] = <span class="literal">false</span>;    <span class="comment">//回溯</span></span><br><span class="line">            result.pop_back();  <span class="comment">//回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="最佳调度问题"><a href="#最佳调度问题" class="headerlink" title="最佳调度问题"></a>最佳调度问题</h1><p>假设有 $n$ 个任务由 $k$ 个可并行工作的机器完成,完成任务 $i$ 需要的时间为 $t_i$，$i\in [1,n]$.</p>
+<blockquote>
+<p>示例:<br>输入:<br>7 3<br>2 14 4 16 6 5 3<br>输出: 17</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> k, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;task, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;machine, <span class="keyword">int</span> x = <span class="number">1</span>, <span class="keyword">int</span> time = <span class="number">0</span>, <span class="keyword">int</span> min = INT_MAX)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (time &gt;= min)</span><br><span class="line">        <span class="keyword">return</span>; <span class="comment">//剪枝,大于最小值就不用再放任务了,直接舍弃</span></span><br><span class="line">    <span class="keyword">if</span> (x &gt; n)  <span class="comment">//放完任务,判断时间</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (time &lt; min)</span><br><span class="line">            min = time;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (machine[i] + task[x] &lt;= min) <span class="comment">//剪枝,大于最小值没必要放任务了</span></span><br><span class="line">        &#123;</span><br><span class="line">            machine[i] += task[x];</span><br><span class="line">            search(n, k, task, machine, x + <span class="number">1</span>, max(time, machine[i]), min);</span><br><span class="line">            machine[i] -= task[x];      <span class="comment">//回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>计算机</category>
         <category>算法</category>
@@ -456,39 +676,41 @@ f(x) = (b_1^2+b_2^2+\cdots+b_n^2)x^2+2(a_1b_2+a_2b_2+\cdots+a_nb_n)x+(a_1^2+a_2^
       </tags>
   </entry>
   <entry>
-    <title>回溯</title>
-    <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/</url>
-    <content><![CDATA[<h1 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h1><p>给定一个没有重复数字的序列,返回其所有可能的全排列.</p>
-<blockquote>
-<p>示例:<br>输入: [1,2,3]<br>输出: [[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]]</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pailie</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; &amp;used, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;result, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; &amp;resset)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (result.size() == nums.size())  <span class="comment">//是否已经穷尽</span></span><br><span class="line">    &#123;</span><br><span class="line">        resset.push_back(result);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!used[i])  <span class="comment">//记录是否已经使用</span></span><br><span class="line">        &#123;</span><br><span class="line">            result.push_back(nums[i]);</span><br><span class="line">            used[i] = <span class="literal">true</span>;</span><br><span class="line">            pailie(nums, used, result, resset);</span><br><span class="line">            used[i] = <span class="literal">false</span>;    <span class="comment">//回溯</span></span><br><span class="line">            result.pop_back();  <span class="comment">//回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="最佳调度问题"><a href="#最佳调度问题" class="headerlink" title="最佳调度问题"></a>最佳调度问题</h1><p>假设有 $n$ 个任务由 $k$ 个可并行工作的机器完成,完成任务 $i$ 需要的时间为 $t_i$，$i\in [1,n]$.</p>
-<blockquote>
-<p>示例:<br>输入:<br>7 3<br>2 14 4 16 6 5 3<br>输出: 17</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> k, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;task, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;machine, <span class="keyword">int</span> x = <span class="number">1</span>, <span class="keyword">int</span> time = <span class="number">0</span>, <span class="keyword">int</span> min = INT_MAX)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (time &gt;= min)</span><br><span class="line">        <span class="keyword">return</span>; <span class="comment">//剪枝,大于最小值就不用再放任务了,直接舍弃</span></span><br><span class="line">    <span class="keyword">if</span> (x &gt; n)  <span class="comment">//放完任务,判断时间</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (time &lt; min)</span><br><span class="line">            min = time;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (machine[i] + task[x] &lt;= min) <span class="comment">//剪枝,大于最小值没必要放任务了</span></span><br><span class="line">        &#123;</span><br><span class="line">            machine[i] += task[x];</span><br><span class="line">            search(n, k, task, machine, x + <span class="number">1</span>, max(time, machine[i]), min);</span><br><span class="line">            machine[i] -= task[x];      <span class="comment">//回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
+    <title>数列极限例题</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%BE%8B%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>已知 $\lim\limits_{n\to \infty} a_n = a, \lim\limits_{n\to\infty} b_n = b$, 证明 : </p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}=ab</script><p><strong>证</strong></p>
+<p>令 $d_n = b_n - b$, 则有</p>
+<script type="math/tex; mode=display">
+\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n} = \frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b</script><p>因为 $\lim\limits_{n\to\infty} a_n = a$, 由数列极限的有界性可知, $\exist M\in R^+$, 使得 $\forall n\in N^+, |a_n|\le M$, 则</p>
+<script type="math/tex; mode=display">
+\left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}\right|\le \frac{|a_1||d_n|+|a_2||d_{n-1}|\cdots+|a_n||d_1|}{n}\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}</script><p>因为 $\lim\limits_{n\to\infty} b_n = b$, 则 $\forall \varepsilon &gt; 0, \exist N_b, \forall n&gt;N_b, |d_n-0| = |b_n-b|&lt;\varepsilon$</p>
+<p>所以 $\lim\limits_{n\to\infty} |d_n| = 0$, 故有</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty} \frac{|d_1|+|d_2|+\cdots+|d_n|}{n} = 0</script><p>因此, $\forall \varepsilon &gt; 0, \exist N_d,\forall n&gt;N_d$, 有</p>
+<script type="math/tex; mode=display">
+\frac{|d_1|+|d_2|+\cdots+|d_n|}{n} <\frac{\varepsilon}{2M}</script><p>又因为 $\lim\limits_{n\to\infty} a_n = a$, 故有</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty} \frac{a_1+a_2+\cdots+a_n}{n} = a</script><p>因此, $\forall \varepsilon &gt; 0, \exist N_a,\forall n&gt;N_a$, 有</p>
+<script type="math/tex; mode=display">
+\left|\frac{a_1+a_2+\cdots+a_n}{n} -a\right|<\frac{\varepsilon}{2|b|+1}</script><p>取 $N = \max\{N_d, N_a\}, \forall n&gt;N$, 有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}-ab\right| &= \left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b -ab\right|\\
+&\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}
++\left|\frac{a_1+a_2+\cdots+a_n}{n} - a\right|
+\cdot|b|\\
+&\le M\frac{\varepsilon}{2M}+\frac{\varepsilon}{2|b|+1}\cdot|b|<\varepsilon
+\end{aligned}</script><p>证毕.</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1>]]></content>
       <categories>
-        <category>计算机</category>
-        <category>算法</category>
+        <category>数学</category>
+        <category>数学分析</category>
+        <category>数列极限</category>
       </categories>
       <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>递归</title>
-    <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E9%80%92%E5%BD%92/</url>
-    <content><![CDATA[<h1 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> &amp;count, <span class="keyword">char</span> A = <span class="string">&#x27;A&#x27;</span>, <span class="keyword">char</span> B = <span class="string">&#x27;B&#x27;</span>, <span class="keyword">char</span> C = <span class="string">&#x27;C&#x27;</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; A &lt;&lt; <span class="string">&quot; - &gt; &quot;</span> &lt;&lt; C &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		hanoi(n - <span class="number">1</span>, count, A, C, B);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; A &lt;&lt; <span class="string">&quot; - &gt; &quot;</span> &lt;&lt; C &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		hanoi(n - <span class="number">1</span>, count, B, A, C);</span><br><span class="line">	&#125;</span><br><span class="line">	++count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	hanoi(<span class="number">6</span>, count);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; count &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Quad</span> // 保存当前状态</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    Quad();</span><br><span class="line">    Quad(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b, <span class="keyword">char</span> c) : _n(n), _x(a), _y(b), _z(c) &#123;&#125;</span><br><span class="line">    <span class="keyword">int</span> _n;          <span class="comment">// 要移动的盘子数量</span></span><br><span class="line">    <span class="keyword">char</span> _x, _y, _z; <span class="comment">// 保存柱子名称</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> x, <span class="keyword">char</span> y, <span class="keyword">char</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">stack</span>&lt;Quad&gt; s;</span><br><span class="line">    s.push(Quad(n, x, y, z));</span><br><span class="line">    <span class="keyword">while</span> (!s.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        Quad q = s.top();</span><br><span class="line">        s.pop();</span><br><span class="line">        n = q._n;</span><br><span class="line">        x = q._x;</span><br><span class="line">        y = q._y;</span><br><span class="line">        z = q._z;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Move top disk from peg &quot;</span> &lt;&lt; q._x</span><br><span class="line">                      &lt;&lt; <span class="string">&quot; to peg &quot;</span> &lt;&lt; q._z &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//以栈push,所以三个操作都倒过来.</span></span><br><span class="line">            s.push(Quad(n - <span class="number">1</span>, y, x, z));</span><br><span class="line">            s.push(Quad(<span class="number">1</span>, x, y, z));</span><br><span class="line">            s.push(Quad(n - <span class="number">1</span>, x, z, y));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    hanoi(<span class="number">3</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">combination</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(k&gt;n)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k==n || k==<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> combination(n<span class="number">-1</span>,k<span class="number">-1</span>)+combination(n<span class="number">-1</span>,k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">triangle</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;=i;++j)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;combination(i,j)&lt;&lt;<span class="string">&quot;  &quot;</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	triangle(<span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>计算机</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
+        <tag>例题</tag>
       </tags>
   </entry>
   <entry>
