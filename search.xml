@@ -897,7 +897,28 @@ u_n > \int_0^{\frac{1}{(n+1)\pi}}\frac{dt}{1+(n\pi+t)^2\sin^2 t}>\frac{1}{2}\cdo
 \int_0^{+\infty} \frac{dx}{1+x^2\sin ^2x}</script><p>发散.</p>
 <p>(2) 取 $a_n=n\pi, n=0,1,2,\cdots$, 则</p>
 <script type="math/tex; mode=display">
-u_n</script>]]></content>
+\begin{aligned}
+u_n&=\int_{n\pi}^{(n+1)\pi}\frac{dx}{1+x^4\sin ^2x}\xlongequal[]{x=n\pi +t}\int_0^\pi \frac{dt}{1+(n\pi+t)^4\sin^2t}\\
+&=\int_0^\frac{\pi}{2}\frac{dt}{1+(n\pi+t)^4\sin^2t}+\int_\frac{\pi}{2}^\pi\frac{dt}{1+(n\pi+t)^4\sin^2t}\\
+&=u_n'+u_n''
+\end{aligned}</script><p>对于 $u_n’$, 当 $0&lt;t&lt;\frac{\pi}{2}$ 时, </p>
+<script type="math/tex; mode=display">
+(n\pi+t)^4\sin^2t\ge n^4\pi^4\left(\frac{2t}{\pi}\right)^2=4\pi^2n^4t^2</script><p>于是</p>
+<script type="math/tex; mode=display">
+u_n'\le \int_0^\frac{\pi}{2} \frac{dt}{1+4\pi^2n^4t^2}\xlongequal[]{x=2\pi n^2t}\frac{1}{2\pi n^2}\int_0^{n^2\pi^2}\frac{dx}{1+x^2}<\frac{1}{4n^2}</script><p>因为 $\sum\limits_{n=1}^\infty \frac{1}{n^2}$ 收敛, 可知 $\sum\limits_{n=1}^\infty u_n’$ 收敛.</p>
+<p>对于 $u_n’’$, 作变换 $x=\pi - t$, 则</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_n'' &=\int_\frac{\pi}{2}^\pi\frac{dt}{1+(n\pi+t)^4\sin^2t}\xlongequal[]{x=\pi - t}\int_{\frac{\pi}{2}}^{0}\frac{-dx}{1+(n\pi+\pi-x)^4\sin^2(\pi-x)}\\
+&=\int_0^\frac{\pi}{2}\frac{dt}{1+(n\pi+\pi-t)^4\sin^2t}
+\end{aligned}</script><p>当 $0&lt;t&lt;\frac{\pi}{2}$ 时, </p>
+<script type="math/tex; mode=display">
+(n\pi+\pi-t)^4\sin^2t\ge (n\pi+\pi-\frac{\pi}{2})^4\left(\frac{2t}{\pi}\right)^2\ge(n\pi)^4\left(\frac{2t}{\pi}\right)^2=4\pi^2n^4t^2</script><p>同理可得  $\sum\limits_{n=1}^\infty u_n’’$ 收敛.</p>
+<p>从而 $\sum\limits_{n=1}^{\infty} u_n$ 收敛, 由积分判别法可知</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} \frac{dx}{1+x^4\sin ^2x}</script><p>收敛.</p>
+<p>证毕.</p>
+]]></content>
       <categories>
         <category>数学</category>
         <category>数学分析</category>
