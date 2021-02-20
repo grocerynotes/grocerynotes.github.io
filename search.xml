@@ -811,4 +811,68 @@ a^n - 1= (a-1)&(a^{n-1}+a^{n-2}+a^{n-3}+\cdots+a^2+a+1)
         <tag>使用手册</tag>
       </tags>
   </entry>
+  <entry>
+    <title>高斯消去法</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="高斯消去法计算量"><a href="#高斯消去法计算量" class="headerlink" title="高斯消去法计算量"></a>高斯消去法计算量</h1><script type="math/tex; mode=display">
+A=\left[\begin{array}{cccccc}
+a_{11} & a_{12} & \cdots & a_{1 k} & \cdots & a_{1 n} \\
+& a_{22} & \cdots & a_{2 k} & \cdots & a_{2 n} \\
+& & \ddots & \vdots & & \vdots \\
+& & & a_{k k} & \cdots & a_{k n} \\
+& & & \vdots & & \vdots \\
+& & & a_{n k} & \cdots & a_{n n}
+\end{array}\right]\left[\begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{k} \\
+\vdots \\
+x_{n}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1} \\
+b_{2} \\
+\vdots \\
+b_{k} \\
+\vdots \\
+b_{n}
+\end{array}\right]</script><p>消元过程的第 $k$ 步需除法运算 $n-k$ 次, 乘法和减法运算各需 $(n-k)\cdot (n-k+1)$ 次, 所以高斯消元过程共需乘法和除法运算的次数为</p>
+<script type="math/tex; mode=display">
+\sum_{k=1}^{n-1}(n-k)+\sum_{k=1}^{n-1}(n-k)(n+1-k)=\frac{n^3}{3}+\frac{n^2}{2}-\frac{5n}{6}</script><p>需加法和减法运算的次数为</p>
+<script type="math/tex; mode=display">
+\sum_{k=1}^{n-1}(n-k)(n-k+1)=\frac{n^3}{3}-\frac{n}{3}</script><script type="math/tex; mode=display">
+A=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1 n} \\
+& a_{22} & \cdots & a_{2 n} \\
+& & \ddots & \vdots \\
+& & & a_{n n}
+\end{array}\right]\left[\begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1} \\
+b_{2} \\
+\vdots \\
+b_{n}
+\end{array}\right]</script><p>回代时, 对第 $k$ 行</p>
+<script type="math/tex; mode=display">
+a_{kk}x_k+a_{k+1}x_{k+1}+\cdots+a_{kn}x_n=b_k</script><p>求解 $x_k$ 的值, 乘法需 $n-k$ 次,  除法运算需 $1$ 次, 减法运算需 $n-k$ 次, 所以回代过程共需乘法和除法运算的次数为</p>
+<script type="math/tex; mode=display">
+\sum_{k=1}^n(n-k+1)=\frac{n(n+1)}{2}</script><p>需加法和减法运算的次数为</p>
+<script type="math/tex; mode=display">
+\sum_{k=1}^n(n-k)=\frac{n(n-1)}{2}</script><p>因此, 高斯消元法总共需乘除法运算的次数为</p>
+<script type="math/tex; mode=display">
+\frac{n^3}{3}+\frac{n^2}{2}-\frac{5n}{6}+\frac{n(n+1)}{2}\approx \frac{n^3}{3}</script><p>需加减法运算的次数为</p>
+<script type="math/tex; mode=display">
+\frac{n^3}{3}-\frac{n}{3}+\frac{n(n-1)}{2}\approx \frac{n^3}{3}</script>]]></content>
+      <categories>
+        <category>数学</category>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>方程组</tag>
+      </tags>
+  </entry>
 </search>
