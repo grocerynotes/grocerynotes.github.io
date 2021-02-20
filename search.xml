@@ -875,4 +875,36 @@ a_{kk}x_k+a_{k+1}x_{k+1}+\cdots+a_{kn}x_n=b_k</script><p>求解 $x_k$ 的值, �
         <tag>方程组</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数项级数例题</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0%E4%BE%8B%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>(1) 证明下列反常积分发散</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} \frac{dx}{1+x^2\sin ^2x}</script><p>(2) 证明下列反常积分收敛</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} \frac{dx}{1+x^4\sin ^2x}</script><p><strong>证</strong></p>
+<p>(1) 取 $a_n = n\pi, n=0, 1, 2, \cdots$, 则</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_n &= \int_{n\pi}^{(n+1)\pi}\frac{dx}{1+x^2\sin ^2x}   \xlongequal[]{x=n\pi +t}\int_0^\pi \frac{dt}{1+(n\pi+t)^2\sin ^2t}\\
+& > \int_0^{\frac{1}{(n+1)\pi}}\frac{dt}{1+(n\pi+t)^2\sin^2 t}
+\end{aligned}</script><p>当 $0&lt;t&lt;\frac{1}{(n+1)\pi}$ 时, </p>
+<script type="math/tex; mode=display">
+(n\pi+t)^2\sin^2 t<(n\pi+\pi)^2 t^2<(n+1)^2\pi^2\left[\frac{1}{(n+1)\pi}\right]^2=1</script><p>于是</p>
+<script type="math/tex; mode=display">
+u_n > \int_0^{\frac{1}{(n+1)\pi}}\frac{dt}{1+(n\pi+t)^2\sin^2 t}>\frac{1}{2}\cdot \frac{1}{(n+1)\pi}</script><p>因为 $\sum\limits_{n=1}^{\infty}\frac{1}{n+1}$ 发散, 可知 $\sum\limits_{n=1}^{\infty} u_n$ 发散, 由积分判别法可知</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} \frac{dx}{1+x^2\sin ^2x}</script><p>发散.</p>
+<p>(2) 取 $a_n=n\pi, n=0,1,2,\cdots$, 则</p>
+<script type="math/tex; mode=display">
+u_n</script>]]></content>
+      <categories>
+        <category>数学</category>
+        <category>数学分析</category>
+        <category>数项级数</category>
+      </categories>
+      <tags>
+        <tag>例题</tag>
+      </tags>
+  </entry>
 </search>
