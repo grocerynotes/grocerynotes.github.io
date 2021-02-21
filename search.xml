@@ -1,80 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo相关配置</title>
-    <url>/%E5%85%B6%E4%BB%96/Hexo/</url>
-    <content><![CDATA[<h2 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h2><ul>
-<li><p><code>git</code></p>
-</li>
-<li><p><code>node v12.15.0</code></p>
-</li>
-</ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo init     <span class="comment"># 初始化静态博客</span></span><br><span class="line">npm install   <span class="comment"># 安装依赖项</span></span><br><span class="line">hexo server   <span class="comment"># 开启本地服务端口</span></span><br></pre></td></tr></table></figure>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><h3 id="更换"><a href="#更换" class="headerlink" title="更换"></a>更换</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p><code>\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-<h3 id="分栏"><a href="#分栏" class="headerlink" title="分栏"></a>分栏</h3><p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo new page tags         <span class="comment"># 生成标签页</span></span><br><span class="line">hexo new page categories   <span class="comment"># 生成目录页</span></span><br></pre></td></tr></table></figure>
-<p><code>\source\categories\index.md</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
-<p><code>\source\tags\index.md</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br></pre></td></tr></table></figure>
-<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<p><code>\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-<p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="折叠"><a href="#折叠" class="headerlink" title="折叠"></a>折叠</h3><p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><code>Fromt-matter</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">description:</span> <span class="string">显示出来的摘要内容</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<h2 id="GitHub-Pages部署"><a href="#GitHub-Pages部署" class="headerlink" title="GitHub Pages部署"></a>GitHub Pages部署</h2><p><code>\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://example.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://grocerynotes.github.io</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:grocerynotes/grocerynotes.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="mathjax支持"><a href="#mathjax支持" class="headerlink" title="mathjax支持"></a>mathjax支持</h2><h3 id="更换渲染器"><a href="#更换渲染器" class="headerlink" title="更换渲染器"></a>更换渲染器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<h3 id="开启渲染"><a href="#开启渲染" class="headerlink" title="开启渲染"></a>开启渲染</h3><p><code>\themes\next\_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="禁用渲染"><a href="#禁用渲染" class="headerlink" title="禁用渲染"></a>禁用渲染</h3><p><code>\scaffolds\post.md</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span>  <span class="comment"># 在文章front-matter中需要写true开启渲染</span></span><br></pre></td></tr></table></figure>
-<h3 id="解决转义冲突"><a href="#解决转义冲突" class="headerlink" title="解决转义冲突"></a>解决转义冲突</h3><p><code>\node_modules\kramed\lib\rules\inline.js</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">/**</span></span><br><span class="line"> <span class="string">*</span> <span class="string">修改下列转义规则</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">escape:</span> <span class="string">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">em:</span> <span class="string">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line"><span class="string">*/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">escape:</span> <span class="string">/^\\([`*\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"><span class="attr">em:</span> <span class="string">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>使用手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>minecraft</title>
-    <url>/%E5%85%B6%E4%BB%96/minecraft/</url>
-    <content><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=842812754&bvid=BV1854y1z7q8&cid=257277039&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h1><ul>
-<li><a href="https://www.java.com/zh-CN/download/">Java8</a></li>
-<li><a href="https://www.mcbbs.net/thread-142335-1-1.html">HMCL启动器</a></li>
-</ul>
-<h1 id="模组"><a href="#模组" class="headerlink" title="模组"></a>模组</h1><ul>
-<li><a href="https://www.curseforge.com/minecraft/modpacks">curseforge</a></li>
-</ul>
-<h1 id="多人联机"><a href="#多人联机" class="headerlink" title="多人联机"></a>多人联机</h1><ul>
-<li><a href="https://files.minecraftforge.net/">Forge服务端</a></li>
-<li><a href="https://www.natfrp.com/">Sakurafrp端口映射</a></li>
-</ul>
-<h1 id="OP命令"><a href="#OP命令" class="headerlink" title="OP命令"></a>OP命令</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">/gamemode</span>                         <span class="comment"># 1创造 0生存</span></span><br><span class="line"><span class="string">/gamerule</span> <span class="string">keepInven/tory</span> <span class="literal">true</span>     <span class="comment"># 死亡不掉落</span></span><br><span class="line"><span class="string">/gamerule</span> <span class="string">doFireTick</span> <span class="literal">false</span>        <span class="comment"># 火势不蔓延</span></span><br><span class="line"><span class="string">/gamerule</span> <span class="string">mobGriefing</span> <span class="literal">false</span>       <span class="comment"># 苦力怕防爆</span></span><br><span class="line"><span class="string">/tp</span> <span class="string">name</span>                          <span class="comment"># 将自己传送至某人身旁</span></span><br><span class="line"></span><br><span class="line"><span class="string">/locate</span> <span class="string">monument</span>      <span class="comment"># 海底神殿</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">endcity</span>       <span class="comment"># 末地城</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">fortress</span>      <span class="comment"># 地狱城堡</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">mansion</span>       <span class="comment"># 林地</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">stronghold</span>    <span class="comment"># 要塞</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>使用手册</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>琐碎</title>
     <url>/%E5%85%B6%E4%BB%96/%E7%90%90%E7%A2%8E/</url>
     <content><![CDATA[<h2 id="回车-r与换行-n"><a href="#回车-r与换行-n" class="headerlink" title="回车\r与换行\n"></a>回车\r与换行\n</h2><ul>
@@ -284,7 +210,7 @@ x(t) &= \frac{b}{2a^2}(\sin at - at\cos at) + x_0\cos at+\frac{x_0'}{a}\sin at\\
       </tags>
   </entry>
   <entry>
-    <title>不等式</title>
+    <title>个别不等式证明</title>
     <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E4%B8%8D%E7%AD%89%E5%BC%8F/</url>
     <content><![CDATA[<h1 id="绝对值不等式-三角不等式"><a href="#绝对值不等式-三角不等式" class="headerlink" title="绝对值不等式/三角不等式"></a>绝对值不等式/三角不等式</h1><p>对任意实数 $a$ 和 $b$, 都有</p>
 <script type="math/tex; mode=display">
@@ -869,7 +795,7 @@ a_{kk}x_k+a_{k+1}x_{k+1}+\cdots+a_{kn}x_n=b_k</script><p>求解 $x_k$ 的值, �
       <categories>
         <category>数学</category>
         <category>数学分析</category>
-        <category>数列极限</category>
+        <category>一元函数极限论</category>
       </categories>
       <tags>
         <tag>例题</tag>
@@ -922,10 +848,117 @@ u_n'' &=\int_\frac{\pi}{2}^\pi\frac{dt}{1+(n\pi+t)^4\sin^2t}\xlongequal[]{x=\pi 
       <categories>
         <category>数学</category>
         <category>数学分析</category>
-        <category>数项级数</category>
+        <category>级数</category>
       </categories>
       <tags>
         <tag>例题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>minecraft安装过程</title>
+    <url>/%E5%85%B6%E4%BB%96/minecraft%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=842812754&bvid=BV1854y1z7q8&cid=257277039&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h1 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h1><ul>
+<li><a href="https://www.java.com/zh-CN/download/">Java8</a></li>
+<li><a href="https://www.mcbbs.net/thread-142335-1-1.html">HMCL启动器</a></li>
+</ul>
+<h1 id="模组"><a href="#模组" class="headerlink" title="模组"></a>模组</h1><ul>
+<li><a href="https://www.curseforge.com/minecraft/modpacks">curseforge</a></li>
+</ul>
+<h1 id="多人联机"><a href="#多人联机" class="headerlink" title="多人联机"></a>多人联机</h1><ul>
+<li><a href="https://files.minecraftforge.net/">Forge服务端</a></li>
+<li><a href="https://www.natfrp.com/">Sakurafrp端口映射</a></li>
+</ul>
+<h1 id="OP命令"><a href="#OP命令" class="headerlink" title="OP命令"></a>OP命令</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">/gamemode</span>                         <span class="comment"># 1创造 0生存</span></span><br><span class="line"><span class="string">/gamerule</span> <span class="string">keepInven/tory</span> <span class="literal">true</span>     <span class="comment"># 死亡不掉落</span></span><br><span class="line"><span class="string">/gamerule</span> <span class="string">doFireTick</span> <span class="literal">false</span>        <span class="comment"># 火势不蔓延</span></span><br><span class="line"><span class="string">/gamerule</span> <span class="string">mobGriefing</span> <span class="literal">false</span>       <span class="comment"># 苦力怕防爆</span></span><br><span class="line"><span class="string">/tp</span> <span class="string">name</span>                          <span class="comment"># 将自己传送至某人身旁</span></span><br><span class="line"></span><br><span class="line"><span class="string">/locate</span> <span class="string">monument</span>      <span class="comment"># 海底神殿</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">endcity</span>       <span class="comment"># 末地城</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">fortress</span>      <span class="comment"># 地狱城堡</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">mansion</span>       <span class="comment"># 林地</span></span><br><span class="line"><span class="string">/locate</span> <span class="string">stronghold</span>    <span class="comment"># 要塞</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>使用手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo相关配置</title>
+    <url>/%E5%85%B6%E4%BB%96/Hexo%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="前置依赖环境"><a href="#前置依赖环境" class="headerlink" title="前置依赖环境"></a>前置依赖环境</h2><ul>
+<li><p><code>git</code></p>
+</li>
+<li><p><code>node v12.15.0</code></p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo init     <span class="comment"># 初始化静态博客</span></span><br><span class="line">npm install   <span class="comment"># 安装依赖项</span></span><br><span class="line">hexo server   <span class="comment"># 开启本地服务端口</span></span><br></pre></td></tr></table></figure>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><h3 id="更换"><a href="#更换" class="headerlink" title="更换"></a>更换</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p><code>\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<h3 id="分栏"><a href="#分栏" class="headerlink" title="分栏"></a>分栏</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo new page tags         <span class="comment"># 生成标签页</span></span><br><span class="line">hexo new page categories   <span class="comment"># 生成目录页</span></span><br></pre></td></tr></table></figure>
+<p><code>\source\categories\index.md</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
+<p><code>\source\tags\index.md</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br></pre></td></tr></table></figure>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p><code>\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+<p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="折叠"><a href="#折叠" class="headerlink" title="折叠"></a>折叠</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><code>Fromt-matter</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">description:</span> <span class="string">显示出来的摘要内容</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="GitHub-Pages部署"><a href="#GitHub-Pages部署" class="headerlink" title="GitHub Pages部署"></a>GitHub Pages部署</h2><p><code>\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://example.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://grocerynotes.github.io</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:grocerynotes/grocerynotes.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="mathjax支持"><a href="#mathjax支持" class="headerlink" title="mathjax支持"></a>mathjax支持</h2><h3 id="更换渲染器"><a href="#更换渲染器" class="headerlink" title="更换渲染器"></a>更换渲染器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<h3 id="开启渲染"><a href="#开启渲染" class="headerlink" title="开启渲染"></a>开启渲染</h3><p><code>\themes\next\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="禁用渲染"><a href="#禁用渲染" class="headerlink" title="禁用渲染"></a>禁用渲染</h3><p><code>\scaffolds\post.md</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span>  <span class="comment"># 在文章front-matter中需要写true开启渲染</span></span><br></pre></td></tr></table></figure>
+<h3 id="解决转义冲突"><a href="#解决转义冲突" class="headerlink" title="解决转义冲突"></a>解决转义冲突</h3><p><code>\node_modules\kramed\lib\rules\inline.js</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">/**</span></span><br><span class="line"> <span class="string">*</span> <span class="string">修改下列转义规则</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">escape:</span> <span class="string">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"> <span class="string">*</span> <span class="attr">em:</span> <span class="string">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line"><span class="string">*/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">escape:</span> <span class="string">/^\\([`*\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line"><span class="attr">em:</span> <span class="string">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>使用手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>函数凸性</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6/%E5%87%BD%E6%95%B0%E5%87%B8%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="凸性"><a href="#凸性" class="headerlink" title="凸性"></a>凸性</h1><p>设函数 $f(x)$ 在区间 $I$ 上定义, 若对 $I$ 中的任意两点 $x_1$ 和 $x_2$, 任意 $\lambda\in(0,1)$, 都有</p>
+<script type="math/tex; mode=display">
+f(\lambda x_1+(1-\lambda)x_2)\le \lambda f(x_1)+(1-\lambda)f(x_2)</script><p>则称 $f(x)$ 是 $I$ 上的下凸函数. 若不等号严格成立, 则称 $f(x)$ 在 $I$ 上是严格下凸函数.</p>
+<h1 id="二阶导数与凸性的关系"><a href="#二阶导数与凸性的关系" class="headerlink" title="二阶导数与凸性的关系"></a>二阶导数与凸性的关系</h1><h1 id="拐点"><a href="#拐点" class="headerlink" title="拐点"></a>拐点</h1><h1 id="Jensen不等式"><a href="#Jensen不等式" class="headerlink" title="Jensen不等式"></a>Jensen不等式</h1><p>若 $f(x)$ 为区间 $I$ 上的下凸函数, 则对于任意 $x_i\in I$ 和满足 $\sum\limits_{i=1}^n \lambda_i=1$ 的 $\lambda_i&gt;0(i=1,2,\cdots,n)$, 成立</p>
+<script type="math/tex; mode=display">
+f(\sum_{i=1}^n\lambda_ix_i)\le\sum_{i=1}^n\lambda_i f(x_i)</script><p>特别地, 取 $\lambda_i=\frac{1}{n}(i=1,2,\cdots,n)$, 就有</p>
+<script type="math/tex; mode=display">
+f(\frac{1}{n}\sum_{i=1}^nx_i)\le\frac{1}{n}\sum_{i=1}^n f(x_i)</script><h2 id="Jensen不等式的应用"><a href="#Jensen不等式的应用" class="headerlink" title="Jensen不等式的应用"></a>Jensen不等式的应用</h2><p><strong>例</strong> 证明</p>
+<script type="math/tex; mode=display">
+\sqrt[n]{x_1x_2\cdots x_n}\le\frac{x_1+x_2+\cdots+x_n}{n}</script><p><strong>证</strong></p>
+<p>利用 $\ln x$ 在 $(0,+\infty)$ 上的严格上凸性, 由 $Jensen$ 不等式可得, 对于任意正数 $x_1, x_2, \cdots, x_n$, 成立</p>
+<script type="math/tex; mode=display">
+\frac{\ln x_1+\ln x_2+\cdots+\ln x_n}{n}\le \ln(\frac{x_1+x_2+\cdots+x_n}{n})</script><p>由此得到</p>
+<script type="math/tex; mode=display">
+\sqrt[n]{x_1x_2\cdots x_n}\le\frac{x_1+x_2+\cdots+x_n}{n}</script><p><strong>例</strong> 若 $\sum\limits_{i=1}^n x_i=1, x_i&gt;0$, 求函数 $g(x_1,x_2, \cdots, x_n)=-\sum\limits_{i=1}^n x_i\ln x_i$ 的最大值.</p>
+<p><strong>解</strong></p>
+<p>利用 $f(x)=x\ln x$ 在 $(0,+\infty)$ 上的严格下凸性, 由 $Jensen$ 不等式可得, 对于任意正数 $x_1, x_2, \cdots, x_n$, 成立</p>
+<script type="math/tex; mode=display">
+f(\frac{x_1+x_2+\cdots+x_n}{n})\le \frac{x_1\ln x_1+x_2\ln x_2+\cdots+x_n\ln x_n}{n}=\frac{-g(x_1,x_2,\cdots,x_n)}{n}</script><p>由于 $\sum\limits_{i=1}^n x_i=1$, 化简得到</p>
+<script type="math/tex; mode=display">
+g(x_1,x_2, \cdots, x_n)\le -nf(\frac{1}{n})=-n\cdot\frac{1}{n}\ln\frac{1}{n}=\ln n</script>]]></content>
+      <categories>
+        <category>数学</category>
+        <category>数学分析</category>
+        <category>一元函数微分学</category>
+      </categories>
+      <tags>
+        <tag>函数性质</tag>
       </tags>
   </entry>
 </search>
