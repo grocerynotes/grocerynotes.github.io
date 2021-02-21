@@ -676,44 +676,6 @@ a^n - 1= (a-1)&(a^{n-1}+a^{n-2}+a^{n-3}+\cdots+a^2+a+1)
       </tags>
   </entry>
   <entry>
-    <title>数列极限例题</title>
-    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%BE%8B%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>已知 $\lim\limits_{n\to \infty} a_n = a, \lim\limits_{n\to\infty} b_n = b$, 证明 : </p>
-<script type="math/tex; mode=display">
-\lim_{n\to\infty}\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}=ab</script><p><strong>证</strong></p>
-<p>令 $d_n = b_n - b$, 则有</p>
-<script type="math/tex; mode=display">
-\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n} = \frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b</script><p>因为 $\lim\limits_{n\to\infty} a_n = a$, 由数列极限的有界性可知, $\exists M\in R^+$, 使得 $\forall n\in N^+, |a_n|\le M$, 则</p>
-<script type="math/tex; mode=display">
-\left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}\right|\le \frac{|a_1||d_n|+|a_2||d_{n-1}|\cdots+|a_n||d_1|}{n}\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}</script><p>因为 $\lim\limits_{n\to\infty} b_n = b$, 则 $\forall \varepsilon &gt; 0, \exists N_b, \forall n&gt;N_b, |d_n-0| = |b_n-b|&lt;\varepsilon$</p>
-<p>所以 $\lim\limits_{n\to\infty} |d_n| = 0$, 故有</p>
-<script type="math/tex; mode=display">
-\lim_{n\to\infty} \frac{|d_1|+|d_2|+\cdots+|d_n|}{n} = 0</script><p>因此, $\forall \varepsilon &gt; 0, \exists N_d,\forall n&gt;N_d$, 有</p>
-<script type="math/tex; mode=display">
-\frac{|d_1|+|d_2|+\cdots+|d_n|}{n} <\frac{\varepsilon}{2M}</script><p>又因为 $\lim\limits_{n\to\infty} a_n = a$, 故有</p>
-<script type="math/tex; mode=display">
-\lim_{n\to\infty} \frac{a_1+a_2+\cdots+a_n}{n} = a</script><p>因此, $\forall \varepsilon &gt; 0, \exists N_a,\forall n&gt;N_a$, 有</p>
-<script type="math/tex; mode=display">
-\left|\frac{a_1+a_2+\cdots+a_n}{n} -a\right|<\frac{\varepsilon}{2|b|+1}</script><p>取 $N = \max\{N_d, N_a\}, \forall n&gt;N$, 有</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\left|\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}-ab\right| &= \left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b -ab\right|\\
-&\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}
-+\left|\frac{a_1+a_2+\cdots+a_n}{n} - a\right|
-\cdot|b|\\
-&\le M\frac{\varepsilon}{2M}+\frac{\varepsilon}{2|b|+1}\cdot|b|<\varepsilon
-\end{aligned}</script><p>证毕.</p>
-<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1>]]></content>
-      <categories>
-        <category>数学</category>
-        <category>数学分析</category>
-        <category>数列极限</category>
-      </categories>
-      <tags>
-        <tag>例题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IDE相关配置</title>
     <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/IDE%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h2><p>插件</p>
@@ -876,8 +838,46 @@ a_{kk}x_k+a_{k+1}x_{k+1}+\cdots+a_{kn}x_n=b_k</script><p>求解 $x_k$ 的值, �
       </tags>
   </entry>
   <entry>
+    <title>数列极限例题</title>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E8%AE%BA/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%BE%8B%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>已知 $\lim\limits_{n\to \infty} a_n = a, \lim\limits_{n\to\infty} b_n = b$, 证明 : </p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}=ab</script><p><strong>证</strong></p>
+<p>令 $d_n = b_n - b$, 则有</p>
+<script type="math/tex; mode=display">
+\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n} = \frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b</script><p>因为 $\lim\limits_{n\to\infty} a_n = a$, 由数列极限的有界性可知, $\exists M\in R^+$, 使得 $\forall n\in N^+, |a_n|\le M$, 则</p>
+<script type="math/tex; mode=display">
+\left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}\right|\le \frac{|a_1||d_n|+|a_2||d_{n-1}|\cdots+|a_n||d_1|}{n}\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}</script><p>因为 $\lim\limits_{n\to\infty} b_n = b$, 则 $\forall \varepsilon &gt; 0, \exists N_b, \forall n&gt;N_b, |d_n-0| = |b_n-b|&lt;\varepsilon$</p>
+<p>所以 $\lim\limits_{n\to\infty} |d_n| = 0$, 故有</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty} \frac{|d_1|+|d_2|+\cdots+|d_n|}{n} = 0</script><p>因此, $\forall \varepsilon &gt; 0, \exists N_d,\forall n&gt;N_d$, 有</p>
+<script type="math/tex; mode=display">
+\frac{|d_1|+|d_2|+\cdots+|d_n|}{n} <\frac{\varepsilon}{2M}</script><p>又因为 $\lim\limits_{n\to\infty} a_n = a$, 故有</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty} \frac{a_1+a_2+\cdots+a_n}{n} = a</script><p>因此, $\forall \varepsilon &gt; 0, \exists N_a,\forall n&gt;N_a$, 有</p>
+<script type="math/tex; mode=display">
+\left|\frac{a_1+a_2+\cdots+a_n}{n} -a\right|<\frac{\varepsilon}{2|b|+1}</script><p>取 $N = \max\{N_d, N_a\}, \forall n&gt;N$, 有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|\frac{a_1b_n+a_2b_{n-1}\cdots+a_nb_1}{n}-ab\right| &= \left|\frac{a_1d_n+a_2d_{n-1}\cdots+a_nd_1}{n}+\frac{a_1+a_2+\cdots +a_n}{n}b -ab\right|\\
+&\le M\frac{|d_1|+|d_2|+\cdots+|d_n|}{n}
++\left|\frac{a_1+a_2+\cdots+a_n}{n} - a\right|
+\cdot|b|\\
+&\le M\frac{\varepsilon}{2M}+\frac{\varepsilon}{2|b|+1}\cdot|b|<\varepsilon
+\end{aligned}</script><p>证毕.</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1>]]></content>
+      <categories>
+        <category>数学</category>
+        <category>数学分析</category>
+        <category>数列极限</category>
+      </categories>
+      <tags>
+        <tag>例题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数项级数例题</title>
-    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0%E4%BE%8B%E9%A2%98/</url>
+    <url>/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E7%BA%A7%E6%95%B0/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0%E4%BE%8B%E9%A2%98/</url>
     <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>(1) 证明下列反常积分发散</p>
 <script type="math/tex; mode=display">
 \int_0^{+\infty} \frac{dx}{1+x^2\sin ^2x}</script><p>(2) 证明下列反常积分收敛</p>
