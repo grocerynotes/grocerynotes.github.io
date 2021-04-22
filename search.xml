@@ -930,7 +930,7 @@ f(x) = (b_1^2+b_2^2+\cdots+b_n^2)x^2+2(a_1b_2+a_2b_2+\cdots+a_nb_n)x+(a_1^2+a_2^
 <p>由向量相乘和向量模长定义</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-&\alpha \cdot \beta = |\alpha|\cdot|\beta|\cdot \cos\langle\alpha, \beta\rangle\\
+&|\alpha \cdot \beta| = |\alpha|\cdot|\beta|\cdot \cos\langle\alpha, \beta\rangle\\
 &\alpha\cdot \beta = a_1b_1+a_2b_2\\
 &|\alpha| = \sqrt{\alpha \cdot \alpha}=\sqrt{a_1^2+a_2^2}\\
 &|\beta| = \sqrt{\beta \cdot \beta} = \sqrt{b_1^2+b_2^2}
@@ -961,8 +961,7 @@ f(x) = (b_1^2+b_2^2+\cdots+b_n^2)x^2+2(a_1b_2+a_2b_2+\cdots+a_nb_n)x+(a_1^2+a_2^
 <script type="math/tex; mode=display">
 |\alpha|+|\beta| \ge |\alpha+\beta|</script><p>其中等号成立当且仅当 $\alpha$ 与 $\beta$ 的夹角为零, 即 $\frac{a_1}{b_1}=\frac{a_2}{b_2}$.</p>
 <h2 id="积分形式"><a href="#积分形式" class="headerlink" title="积分形式"></a>积分形式</h2><script type="math/tex; mode=display">
-\int f^2(x)dx\int g^2(x)dx\ge \left(\int f(x)g(x)dx\right)^2</script><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><script type="math/tex; mode=display">
-\frac{(2n-1)!!}{(2n)!!}<\frac{(2n)!!}{(2n+1)!!}</script>]]></content>
+\int f^2(x)dx\int g^2(x)dx\ge \left(\int f(x)g(x)dx\right)^2</script>]]></content>
       <categories>
         <category>数学</category>
       </categories>
