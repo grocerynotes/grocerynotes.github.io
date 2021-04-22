@@ -193,7 +193,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">进程同步</a>
         </h2>
 
         <div class="post-meta">
@@ -202,9 +202,28 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:11:15 / 修改时间：22:30:30" itemprop="dateCreated datePublished" datetime="2021-04-19T20:11:15+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:11:15" itemprop="dateCreated datePublished" datetime="2021-04-19T20:11:15+08:00">2021-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-22 20:24:47" itemprop="dateModified" datetime="2021-04-22T20:24:47+08:00">2021-04-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+                </span>
             </span>
 
           
@@ -218,82 +237,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h1><h2 id="Test-and-Set-指令"><a href="#Test-and-Set-指令" class="headerlink" title="Test-and-Set 指令"></a><code>Test-and-Set</code> 指令</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// *lock = FALSE时,表示该资源空闲</span></span><br><span class="line"><span class="comment">// *lock = TRUE时,表示该资源正在被使用</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">TS</span><span class="params">(<span class="keyword">boolean</span> *lock)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">boolean</span> old;</span><br><span class="line">    old = *lock;</span><br><span class="line">    *lock = TRUE;</span><br><span class="line">    <span class="keyword">return</span> old;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="function"><span class="keyword">while</span> <span class="title">TS</span><span class="params">(&amp;lock)</span> </span>; <span class="comment">// 忙等</span></span><br><span class="line">    <span class="comment">// 临界区</span></span><br><span class="line">    lock = FALSE; <span class="comment">// 退出区</span></span><br><span class="line">    <span class="comment">// 剩余区</span></span><br><span class="line">&#125; <span class="keyword">while</span>(TRUE);</span><br></pre></td></tr></table></figure>
-<h2 id="Swap-指令"><a href="#Swap-指令" class="headerlink" title="Swap 指令"></a><code>Swap</code> 指令</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">boolean</span> *a, <span class="keyword">boolean</span> *b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">boolean</span> temp;</span><br><span class="line">    temp = *a;</span><br><span class="line">    *a = *b;</span><br><span class="line">    *b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">	key = TRUE;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">		swap(&amp;lock, &amp;key);</span><br><span class="line">    &#125; <span class="keyword">while</span>(key != FALSE); <span class="comment">// 忙等</span></span><br><span class="line">    <span class="comment">// 临界区</span></span><br><span class="line">    lock = FALSE; <span class="comment">//退出区</span></span><br><span class="line">    <span class="comment">// 剩余区</span></span><br><span class="line">&#125; <span class="keyword">while</span>(TRUE);</span><br></pre></td></tr></table></figure>
-<h2 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h2><h3 id="整型信号量"><a href="#整型信号量" class="headerlink" title="整型信号量"></a>整型信号量</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wait(S) &#123;</span><br><span class="line">	<span class="keyword">while</span>(S &lt;= <span class="number">0</span>); <span class="comment">// 忙等</span></span><br><span class="line">    S--;</span><br><span class="line">&#125;</span><br><span class="line">signal(S) &#123;</span><br><span class="line">	S++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="记录型信号量"><a href="#记录型信号量" class="headerlink" title="记录型信号量"></a>记录型信号量</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process_control_block</span> *<span class="title">list</span>;</span></span><br><span class="line">&#125; semaphore;</span><br><span class="line"></span><br><span class="line">wait(semaphore *S) &#123;</span><br><span class="line">    S-&gt;value--;</span><br><span class="line">    <span class="keyword">if</span>(S-&gt;value &lt; <span class="number">0</span>)</span><br><span class="line">        block(S-&gt;<span class="built_in">list</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">signal(semaphore *S) &#123;</span><br><span class="line">	S-&gt;value++;</span><br><span class="line">    <span class="keyword">if</span>(S-&gt;value &lt;= <span class="number">0</span>)</span><br><span class="line">        wakeup(S-&gt;<span class="built_in">list</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="AND-型信号量"><a href="#AND-型信号量" class="headerlink" title="AND 型信号量"></a><code>AND</code> 型信号量</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Swait(S1, S2, ..., Sn) &#123;</span><br><span class="line">	<span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">		<span class="keyword">if</span>(Si &gt;= <span class="number">1</span> &amp;&amp; ... &amp;&amp; Sn &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">				Si--;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 将第一个满足条件Si &lt; 1的进程放到等待队列</span></span><br><span class="line">            <span class="comment">// 然后将该进程的PC计数器挪到Swait()的开头(即：阻塞自己)</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Ssignal(S1, S2, ..., Sn) &#123;</span><br><span class="line">	<span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++) &#123;</span><br><span class="line">			Si++;</span><br><span class="line">            <span class="comment">// 移动所有在等待队列中的与Si关联的进程到等待队列</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="信号量集"><a href="#信号量集" class="headerlink" title="信号量集"></a>信号量集</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Si 信号量</span></span><br><span class="line"><span class="comment">// ti 资源的分配下限值,要求 Si &gt;= ti</span></span><br><span class="line"><span class="comment">// di 资源的需求量,将进行操作 Si = Si - di</span></span><br><span class="line">Swait(S1, t1, d1, ..., Sn, tn, dn);</span><br><span class="line">Ssignal(S1, d1, ..., Sn, dn);</span><br></pre></td></tr></table></figure>
-<h3 id="信号量描述前趋关系"><a href="#信号量描述前趋关系" class="headerlink" title="信号量描述前趋关系"></a>信号量描述前趋关系</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 进程P1和P2共享同一信号量S</span></span><br><span class="line"></span><br><span class="line">S1; <span class="comment">// 在进程P1的语句</span></span><br><span class="line">signal(S)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*-------------------*/</span></span><br><span class="line"></span><br><span class="line">wait(S); </span><br><span class="line">S2; <span class="comment">// 在进程P2中的语句</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://qungz.photo.store.qq.com/qun-qungz/V50kh60C3U4SFH4bdsk91FkeOV1WUnXq/V5bCQA4NjgyOTI4MTgQfX1gEurTLA!!/800?w5=467&h5=541&rf=viewer_421" width=30%></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 以上图为例</span></span><br><span class="line"><span class="comment">   S1-&gt;S2设置信号量a</span></span><br><span class="line"><span class="comment">   S1-&gt;S3设置信号量b</span></span><br><span class="line"><span class="comment">   S2-&gt;S4设置信号量c</span></span><br><span class="line"><span class="comment">   S2-&gt;S5设置信号量d</span></span><br><span class="line"><span class="comment">   S3-&gt;S6设置信号量e</span></span><br><span class="line"><span class="comment">   S4-&gt;S6设置信号量f</span></span><br><span class="line"><span class="comment">   S5-&gt;S6设置信号量g</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">p1() &#123;</span><br><span class="line">	S1;</span><br><span class="line">    signal(a);</span><br><span class="line">    signal(b);</span><br><span class="line">&#125;</span><br><span class="line">p2() &#123;</span><br><span class="line">	wait(a);</span><br><span class="line">    S2;</span><br><span class="line">    signal(c);</span><br><span class="line">    signal(d);</span><br><span class="line">&#125;</span><br><span class="line">p3() &#123;</span><br><span class="line">	wait(b);</span><br><span class="line">    S3;</span><br><span class="line">    signal(e);</span><br><span class="line">&#125;</span><br><span class="line">p4() &#123;</span><br><span class="line">	wait(c);</span><br><span class="line">    S4;</span><br><span class="line">    signal(f);</span><br><span class="line">&#125;</span><br><span class="line">p5() &#123;</span><br><span class="line">	wait(d);</span><br><span class="line">    S5;</span><br><span class="line">    signal(g);</span><br><span class="line">&#125;</span><br><span class="line">p6() &#123;</span><br><span class="line">    wait(e);</span><br><span class="line">	wait(f);</span><br><span class="line">    wait(g);</span><br><span class="line">    S6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 每次只会有一个进程进入管程</span></span><br><span class="line">Monitor monitor_name &#123;</span><br><span class="line">    <span class="comment">// 共享变量说明</span></span><br><span class="line">    <span class="comment">// 条件变量说明</span></span><br><span class="line">    <span class="comment">// 一组对共享数据结构操作的方法(封装)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="生产者-消费者问题"><a href="#生产者-消费者问题" class="headerlink" title="生产者-消费者问题"></a>生产者-消费者问题</h1><h2 id="利用记录型信号量"><a href="#利用记录型信号量" class="headerlink" title="利用记录型信号量"></a>利用记录型信号量</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> in = <span class="number">0</span>, out = <span class="number">0</span>;</span><br><span class="line">item buffer[n]; <span class="comment">// 共有n个缓冲区</span></span><br><span class="line">semaphore mutex = <span class="number">1</span>; <span class="comment">// 互斥信号量</span></span><br><span class="line">semaphore empty = n, full = <span class="number">0</span>; <span class="comment">// 资源信号量</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		<span class="comment">// 生产一单位资源nextp</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        wait(empty); <span class="comment">// 是否有资源被访问</span></span><br><span class="line">        wait(mutex); <span class="comment">// 是否会产生互斥(交换两条wait操作可能会产生死锁)</span></span><br><span class="line">        buffer[in] = nextp;</span><br><span class="line">        in = (in + <span class="number">1</span>) % n;</span><br><span class="line">        signal(mutex);</span><br><span class="line">        signal(full);</span><br><span class="line">    &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		wait(full);</span><br><span class="line">        wait(mutex);</span><br><span class="line">        nextc = buffer[out];</span><br><span class="line">        out = (out + <span class="number">1</span>) % n;</span><br><span class="line">        signal(mutex);</span><br><span class="line">        signal(empty);</span><br><span class="line">        <span class="comment">// 消费一单位资源nextc</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cobegin</span><br><span class="line">        producer();</span><br><span class="line">    	consumer();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="利用-AND-信号量"><a href="#利用-AND-信号量" class="headerlink" title="利用 AND 信号量"></a>利用 <code>AND</code> 信号量</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> in = <span class="number">0</span>, out = <span class="number">0</span>;</span><br><span class="line">item buffer[n]; <span class="comment">// 共有n个缓冲区</span></span><br><span class="line">semaphore mutex = <span class="number">1</span>; <span class="comment">// 互斥信号量</span></span><br><span class="line">semaphore empty = n, full = <span class="number">0</span>; <span class="comment">// 资源信号量</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		<span class="comment">// 生产一单位资源nextp</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        Swait(empty, mutex);</span><br><span class="line">        buffer[in] = nextp;</span><br><span class="line">        in = (in + <span class="number">1</span>) % n;</span><br><span class="line">        Ssignal(mutex, full);</span><br><span class="line">    &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">        Swait(full, mutex);</span><br><span class="line">        nextc = buffer[out];</span><br><span class="line">        out = (out + <span class="number">1</span>) % n;</span><br><span class="line">        Ssignal(mutex, empty);</span><br><span class="line">        <span class="comment">// 消费一单位资源nextc</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cobegin</span><br><span class="line">        producer();</span><br><span class="line">    	consumer();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="利用管程"><a href="#利用管程" class="headerlink" title="利用管程"></a>利用管程</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Monitor producerconsumer &#123;</span><br><span class="line">	item buffer[N];</span><br><span class="line">    <span class="keyword">int</span> in = <span class="number">0</span>, out = <span class="number">0</span>;</span><br><span class="line">    condition empty, full;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(item x)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(count &gt;= N)</span><br><span class="line">                cwait(empty);</span><br><span class="line">            buffer[in] = x;</span><br><span class="line">            in = (in + <span class="number">1</span>) % n;</span><br><span class="line">            count++;</span><br><span class="line">            csignal(full);</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">get</span><span class="params">(item x)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(count &lt;= <span class="number">0</span>)</span><br><span class="line">                cwait(full);</span><br><span class="line">            x = buffer[out];</span><br><span class="line">            out = (out + <span class="number">1</span>) % N;</span><br><span class="line">            count--;</span><br><span class="line">            csignal(empty);</span><br><span class="line">        &#125;</span><br><span class="line">&#125; PC;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	item x;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="comment">// 生产一单位资源</span></span><br><span class="line">        PC.put(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	item x;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        PC.get(x);</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="comment">// 消费一单位资源</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cobegin</span><br><span class="line">        producer();</span><br><span class="line">    	consumer();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="哲学家进餐问题"><a href="#哲学家进餐问题" class="headerlink" title="哲学家进餐问题"></a>哲学家进餐问题</h1><h2 id="利用记录型信号线"><a href="#利用记录型信号线" class="headerlink" title="利用记录型信号线"></a>利用记录型信号线</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//五个哲学家可能会产生死锁,可以限制只有4个哲学家进餐来避免该问题</span></span><br><span class="line">semaphhore chopstick[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">	wait(chopstick[i]);</span><br><span class="line">    wait(chopstick[i+<span class="number">1</span>]);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    signal(chopstick[i]);</span><br><span class="line">    signal(chopstick[i+<span class="number">1</span>]);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">while</span>(TRUE)</span><br></pre></td></tr></table></figure>
-<h2 id="利用-AND-型信号量"><a href="#利用-AND-型信号量" class="headerlink" title="利用 AND 型信号量"></a>利用 <code>AND</code> 型信号量</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">semaphhore chopstick[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">	Swait(chopstick[(i+<span class="number">1</span>)%<span class="number">5</span>], chopstick[i]);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    Ssignal(chopstick[(i+<span class="number">1</span>)%<span class="number">5</span>], chopstick[i]);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125; <span class="keyword">while</span>(TRUE)</span><br></pre></td></tr></table></figure>
-<h1 id="读者-写者问题"><a href="#读者-写者问题" class="headerlink" title="读者-写者问题"></a>读者-写者问题</h1><p>允许多个进程同时读一个共享对象,但不允许一个写进程和其他进程同时访问共享对象.</p>
-<h2 id="利用记录型信号量-1"><a href="#利用记录型信号量-1" class="headerlink" title="利用记录型信号量"></a>利用记录型信号量</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">semaphore rmutex = <span class="number">1</span>; <span class="comment">// readcount作为临界资源需要互斥信号量</span></span><br><span class="line">semaphore wmutex = <span class="number">1</span>; <span class="comment">// 互斥信号量</span></span><br><span class="line"><span class="keyword">int</span> readcount = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reader</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		wait(rmutex);</span><br><span class="line">        <span class="keyword">if</span>(readcount == <span class="number">0</span>) <span class="comment">//首个读者进程判断是否会产生互斥</span></span><br><span class="line">            wait(wmutex);</span><br><span class="line">        readcount++;</span><br><span class="line">        signal(rmutex);</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        wait(rmutex);</span><br><span class="line">        readcount--;</span><br><span class="line">        <span class="keyword">if</span>(readcount == <span class="number">0</span>)</span><br><span class="line">            signal(wmutex);</span><br><span class="line">        signal(rmutex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		wait(wmutex);</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        signal(wmutex);</span><br><span class="line">    &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cobegin</span><br><span class="line">        reader();</span><br><span class="line">    	writer();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="利用信号量集"><a href="#利用信号量集" class="headerlink" title="利用信号量集"></a>利用信号量集</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> RN; <span class="comment">// 最多允许读者同时读的个数</span></span><br><span class="line">semaphore L = RN, mx = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Reader</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		Swait(L, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        Swait(mx, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        Signal(L, <span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Writer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">do</span> &#123;</span><br><span class="line">       Swait(mx, <span class="number">1</span>, <span class="number">1</span>; L, RN, <span class="number">0</span>); <span class="comment">//无写者进程和读者进程时才开锁</span></span><br><span class="line">       <span class="comment">//...</span></span><br><span class="line">       Signal(mx, <span class="number">1</span>);</span><br><span class="line">   &#125; <span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cobegin</span><br><span class="line">        Reader();</span><br><span class="line">    	Writer();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://grocerynotes.github.io/README/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="GbtH">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GroceryNotes">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/README/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-04-12 19:22:10" itemprop="dateCreated datePublished" datetime="2021-04-12T19:22:10+08:00">2021-04-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
+          <p>进程同步</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -964,6 +916,85 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://grocerynotes.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GbtH">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GroceryNotes">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/" class="post-title-link" itemprop="url">回溯</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-17 18:41:55 / 修改时间：19:26:33" itemprop="dateCreated datePublished" datetime="2021-02-17T18:41:55+08:00">2021-02-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>回溯求解问题</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -1032,14 +1063,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
