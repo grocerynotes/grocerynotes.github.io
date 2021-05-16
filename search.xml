@@ -176,9 +176,6 @@ x(t) &= \frac{b}{2a^2}(\sin at - at\cos at) + x_0\cos at+\frac{x_0'}{a}\sin at\\
         <category>数学</category>
         <category>常微分</category>
       </categories>
-      <tags>
-        <tag>拉普拉斯</tag>
-      </tags>
   </entry>
   <entry>
     <title>取模运算公式</title>
@@ -193,9 +190,6 @@ x(t) &= \frac{b}{2a^2}(\sin at - at\cos at) + x_0\cos at+\frac{x_0'}{a}\sin at\\
         <category>计算机</category>
         <category>算法</category>
       </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
   </entry>
   <entry>
     <title>递归</title>
@@ -207,9 +201,6 @@ x(t) &= \frac{b}{2a^2}(\sin at - at\cos at) + x_0\cos at+\frac{x_0'}{a}\sin at\\
         <category>计算机</category>
         <category>算法</category>
       </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
   </entry>
   <entry>
     <title>回溯</title>
@@ -229,9 +220,6 @@ x(t) &= \frac{b}{2a^2}(\sin at - at\cos at) + x_0\cos at+\frac{x_0'}{a}\sin at\\
         <category>计算机</category>
         <category>算法</category>
       </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
   </entry>
   <entry>
     <title>Git命令</title>
@@ -503,9 +491,6 @@ a_{kk}x_k+a_{k+1}x_{k+1}+\cdots+a_{kn}x_n=b_k</script><p>求解 $x_k$ 的值, �
         <category>数学</category>
         <category>数值分析</category>
       </categories>
-      <tags>
-        <tag>方程组</tag>
-      </tags>
   </entry>
   <entry>
     <title>数列极限例题</title>
@@ -699,9 +684,6 @@ g(x_1,x_2, \cdots, x_n)\le -nf(\frac{1}{n})=-n\cdot\frac{1}{n}\ln\frac{1}{n}=\ln
         <category>数学分析</category>
         <category>一元函数微分学</category>
       </categories>
-      <tags>
-        <tag>函数性质</tag>
-      </tags>
   </entry>
   <entry>
     <title>白嫖</title>
@@ -961,13 +943,11 @@ f(x) = (b_1^2+b_2^2+\cdots+b_n^2)x^2+2(a_1b_2+a_2b_2+\cdots+a_nb_n)x+(a_1^2+a_2^
 <script type="math/tex; mode=display">
 |\alpha|+|\beta| \ge |\alpha+\beta|</script><p>其中等号成立当且仅当 $\alpha$ 与 $\beta$ 的夹角为零, 即 $\frac{a_1}{b_1}=\frac{a_2}{b_2}$.</p>
 <h2 id="积分形式"><a href="#积分形式" class="headerlink" title="积分形式"></a>积分形式</h2><script type="math/tex; mode=display">
-\int f^2(x)dx\int g^2(x)dx\ge \left(\int f(x)g(x)dx\right)^2</script>]]></content>
+\int f^2(x)dx\int g^2(x)dx\ge \left(\int f(x)g(x)dx\right)^2</script><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><script type="math/tex; mode=display">
+|\sqrt{a}-\sqrt{b}|\le \sqrt{|a-b|}</script>]]></content>
       <categories>
         <category>数学</category>
       </categories>
-      <tags>
-        <tag>不等式</tag>
-      </tags>
   </entry>
   <entry>
     <title>恒等式</title>
@@ -984,8 +964,96 @@ a^n - 1= (a-1)&(a^{n-1}+a^{n-2}+a^{n-3}+\cdots+a^2+a+1)
       <categories>
         <category>数学</category>
       </categories>
-      <tags>
-        <tag>恒等式</tag>
-      </tags>
+  </entry>
+  <entry>
+    <title>英语短语摘抄</title>
+    <url>/%E8%8B%B1%E8%AF%AD/%E7%9F%AD%E8%AF%AD%E6%91%98%E6%8A%84/</url>
+    <content><![CDATA[<p>back down 退让;撤销</p>
+<p>After being confronted with our evidence, the other side had to back down.</p>
+<p>be indicative of 表示;象征</p>
+<p>press ahead with 推进;加紧</p>
+<p>press ahead with effort 加紧努力 </p>
+<p>press ahead with political reform 推进政治改革</p>
+<p>voluntary license 自愿许可</p>
+<p>compulsory license 强制许可</p>
+<p>intellectual property 知识产权</p>
+<p>take a moment to… 花时间…</p>
+<p>stamp out 扑灭;毁掉</p>
+<p>The doctors are trying to stamp out the disease.</p>
+<p>red ink 赤字</p>
+<p>lag behind 落后;逾期付款</p>
+<p>dance to sb’s tune 完全照办</p>
+<p>work like a charm 富有成效</p>
+<p>point fingers at 指责</p>
+<p>a community of life 生命共同体</p>
+<p>phase down 逐步减少</p>
+<p>phase v.分阶段计划</p>
+<p>tipping point 临界点</p>
+<p>in this regard 在这点上</p>
+<p>draw upon 利用;借鉴</p>
+<p>attribute to… 归结于…</p>
+<p>come in handy 派上用场</p>
+<p>not so much…as… 与其说是…不如说是…</p>
+<p>He is not so much a journalist as a writer.</p>
+<p>liability clause 责任条款</p>
+<p>bull run 牛市</p>
+<p>cross-section of… 横截面;典型的一群…</p>
+<p>a cross-section of an airplane</p>
+<p>I was surprised at the cross-section of people there.</p>
+<p>economic entity 经济体</p>
+<p>left-behind children 留守儿童</p>
+<p>There comes a time when… 有时…</p>
+<p>on the scale 以…的比例</p>
+<p>too far out 太过分</p>
+<p>not least 尤其是</p>
+<p>call for 需要;去取(接)</p>
+<p>More work doesn’t necessarily call for more men.</p>
+<p>When will you call for the article?</p>
+<p>at times 有时</p>
+<p>surpass the expectations 超出预期</p>
+<p>give up 放弃</p>
+<p>apply for 申请</p>
+<p>It could simply be that… 仅仅是…</p>
+<p>tend to 趋向于…</p>
+<p>chain of causation 因果链</p>
+<p>most/less likely to… 最可能/不可能做…</p>
+<p>associate professor 副教授</p>
+<p>in charge of 主管</p>
+<p>play the role of… 担任…角色</p>
+<p>keep up with 跟上</p>
+<p>hawk one’s wares 叫卖</p>
+<p>ware n.商品;某种制品</p>
+<p>set to… 开始…</p>
+<p>reflect to… 仔细想;回忆</p>
+<p>Secondary Listing 二次上市</p>
+<p>stake out 明确表明(立场)</p>
+<p>charter school 特许学校</p>
+<p>in the driver’s seat 处于控制地位;主管</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>英语长难句摘抄</title>
+    <url>/%E8%8B%B1%E8%AF%AD/%E9%95%BF%E9%9A%BE%E5%8F%A5%E6%91%98%E6%8A%84/</url>
+    <content><![CDATA[<p><strong>Though I never arrived at the perfection I had been so ambitious of obtaining, but fell far short of it, yet I was, by endeavour, a better and a happier man than I otherwise should have been if I had not attempted it.</strong></p>
+<p>yet conj.但是</p>
+<p>endeavour n.努力</p>
+<p>otherwise adv.否则;另外</p>
+<p>never/not…but… 不是…而是…</p>
+<p>fall far short of it 远远达不到(修饰词far表现程度)</p>
+<p>should have done… 过去本应该做…却未做</p>
+<p><strong>With researcher J.E. Mosimann, he has co-authored a work in which a computer model showed that in around 300 years, given the right conditions, a small influx of hunters into eastern Beringia 12,000 years ago could have spread across North America in a wave and wiped out game animals to feed their burgeoning population.</strong></p>
+<p>influx n.涌入</p>
+<p>burgeoning adj.蓬勃发展的</p>
+<p>in around 300 years 大约300年的一段时间内</p>
+<p>could have done… 过去可能…(对已发生的动作或状态作主观猜测)”</p>
+<p>wipe out 抹除</p>
+<p>game animal狩猎动物</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
   </entry>
 </search>
